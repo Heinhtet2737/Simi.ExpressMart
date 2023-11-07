@@ -1,65 +1,27 @@
-Shuup documentation
+Shuup Release Notes
 ===================
 
-Everything about Shuup
-
-About this Documentation
-------------------------
-
-This documentation is mainly for developers. If you are
-interested in merchant documentation, you can find it
-`here <http://shuup-guide.readthedocs.io/en/latest/>`_.
-
-
-First Steps
------------
-
-* :doc:`howto/getting_started`
-* :doc:`howto/getting_started_dev`
-* :doc:`ref/glossary`
-
-
-Developing Shuup
-----------------
-
-* :doc:`howto/getting_started_dev`
-* :doc:`ref/admin_module`
-* :doc:`ref/data_model`
-* :doc:`ref/provides`
-* :doc:`ref/services`
-* :doc:`ref/templates`
-* :doc:`api/modules`
-* :doc:`ref/notify_specification`
-* :doc:`ref/prices_and_taxes`
-* :doc:`ref/product_catalog`
-* :doc:`ref/campaigns`
-* :doc:`ref/units`
-* :doc:`ref/formpart`
-* :doc:`howto/basic_admin_tasks`
-* :doc:`howto/dev_tools`
-* :doc:`ref/performance_optimizations`
-
-
-Extending Shuup
----------------
-
-* :doc:`howto/addons`
-* :doc:`howto/themes`
-* :doc:`howto/prices_and_taxes_implementation`
-* :doc:`howto/new_tab`
-* :doc:`howto/campaign_condition`
-
-
-
-Shuup
------
-* :doc:`changes`
-* :doc:`howto/contributing`
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :maxdepth: 1
+   1.1.0
+   1.0.0
+   0.5.8
+   0.5.7
+   0.5.6
+   0.5.5
+   0.5.4
+   0.5.3
+   0.5.1
+   0.5.0
+   0.4.7
+   0.4.6.1
+   0.4.6
+   0.4.5
+   0.4.4
+   0.4.3
+   0.4.2
+   0.4.1
+   0.4.0
+   shoop-4.0.0
+   shoop-3.0.0
+   shoop-2.0.0
