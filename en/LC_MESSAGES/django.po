@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-15 14:39+0000\n"
+"POT-Creation-Date: 2019-12-02 12:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -19,144 +19,64 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "Generated-By: Babel 2.1.1\n"
 
-msgid "Addons"
+msgid "Shuup Customer Group Pricing"
 msgstr ""
 
 #, python-format
-msgid "Enable %s"
+msgid "Price (%(shop)s/%(group)s)"
 msgstr ""
 
 #, python-format
-msgid "%d new addons enabled."
+msgid "Discount (%(shop)s/%(group)s)"
 msgstr ""
 
-#, python-format
-msgid "%d previously enabled addons disabled."
+msgid "product"
 msgstr ""
 
-msgid "No changes were made."
+msgid "shop"
 msgstr ""
 
-msgid "Save addon changes"
+msgid "contact group"
 msgstr ""
 
-msgid "Upload new addon"
+msgid "price"
 msgstr ""
 
-msgid "Reload application"
+msgid "product price"
 msgstr ""
 
-msgid ""
-"There are no viable reload methods available. Please contact your system "
-"administrator."
+msgid "product prices"
 msgstr ""
 
-msgid "Reload Method"
+msgid "discount amount"
 msgstr ""
 
-msgid "Reloading."
+msgid "product discount"
 msgstr ""
 
-msgid "Addon file (ZIP)"
+msgid "product discounts"
 msgstr ""
 
-msgid "Only upload the addon files you trust."
+msgid "Customer Group Pricing"
 msgstr ""
 
-msgid "Only wheel files (`.whl`) are supported."
+msgid "Customer Group Discount"
 msgstr ""
 
-msgid "Upload"
-msgstr ""
-
-msgid "Install Addon"
-msgstr ""
-
-msgid "Installed addons"
-msgstr ""
-
-msgid "Addon name"
-msgstr ""
-
-msgid "Is enabled"
-msgstr ""
-
-msgid "You don't have any installed addons"
-msgstr ""
-
-msgid "Reload Application Server"
+msgid "Contact Group Discount"
 msgstr ""
 
 msgid ""
-"When you reload the application server, it may take some time for the new "
-"instance of your application to properly initialize."
+"Here you can set individual discount amounts for different contact groups. "
+"The discount amount may be visible on storefront. These groups are defined "
+"in Contacts Settings – Contact Groups"
+msgstr ""
+
+msgid "Contact Group Pricing"
 msgstr ""
 
 msgid ""
-"In addition, there is always a chance for the server to not properly "
-"initialize at all, in which case you may need to troubleshoot the problem "
-"yourself (or have a system administrator handy)."
-msgstr ""
-
-msgid "Reload steps"
-msgstr ""
-
-msgid ""
-"Finalize installations for newly installed addons (migrate and collect "
-"static resources)"
-msgstr ""
-
-msgid "Reload application server"
-msgstr ""
-
-msgid "Reload was initiated."
-msgstr ""
-
-msgid "Reloading application failed."
-msgstr ""
-
-msgid "Finalizing installations."
-msgstr ""
-
-msgid "Your Shuup seems to be back up!"
-msgstr ""
-
-msgid "Your Shuup is not up yet. Trying again soon."
-msgstr ""
-
-msgid "Select file"
-msgstr ""
-
-msgid "Installation Finished"
-msgstr ""
-
-msgid "Installation Failed"
-msgstr ""
-
-msgid "Success"
-msgstr ""
-
-#, python-format
-msgid ""
-"Next, <a href=\"%(addon_list_url)s\" class=\"text-success\"><strong>activate "
-"the newly installed addon</strong></a> and <a href=\"%(addon_reload_url)s\" "
-"class=\"text-success\"><strong>reload your application server</strong></a>."
-msgstr ""
-
-msgid "Error"
-msgstr ""
-
-msgid "Installer Log"
-msgstr ""
-
-msgid "Upload Addon - Install"
-msgstr ""
-
-msgid "Package Information"
-msgstr ""
-
-msgid "No package information could be extracted."
-msgstr ""
-
-msgid "File List"
+"Here you can set individual pricing for different contact groups. This can "
+"be useful for special discounts or for B2B orders. These groups are defined "
+"in Contacts Settings – Contact Groups"
 msgstr ""
