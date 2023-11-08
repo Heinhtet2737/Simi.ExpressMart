@@ -13,31 +13,20 @@ from django.shortcuts import render
 from shuup.core.error_handling import ErrorPageHandler
 
 
-class AdminPageErrorHandler(ErrorPageHandler):
+class FrontPageErrorHandler(ErrorPageHandler):
     """
-    Page Error handler for Shuup Admin
+    Page Error handler for Shuup Front
     """
 
     @classmethod
     def can_handle_error(cls, request, error_status):
-        # we can't handle 404 errors, neither static or media files
-        # since 404 errors means no URL match,
-        # how can we figure out, in a elegant way if we are in the Admin?
-        if (
-            error_status == 404
-            or request.path.startswith(settings.STATIC_URL)
-            or request.path.startswith(settings.MEDIA_URL)
-        ):
+        # we can't handle static or media files
+        if request.path.startswith(settings.STATIC_URL) or request.path.startswith(settings.MEDIA_URL):
             return False
 
-        # we are in a view which belongs to the Admin
-        elif request.resolver_match:
-            from shuup.admin import ShuupAdminAppConfig
-
-            return request.resolver_match.app_name == ShuupAdminAppConfig.label
-
-        return False
+        # Front will handle everything else, for now
+        return True
 
     @classmethod
     def handle_error(cls, request, error_status):
-        return render(request, "shuup/admin/errors/{}.jinja".format(error_status), status=error_status)
+        return render(request, "shuup/front/errors/{}.jinja".format(error_status), status=error_status)
