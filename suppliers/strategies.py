@@ -6,7 +6,8 @@
 # This source code is licensed under the OSL-3.0 license found in the
 # LICENSE file in the root directory of this source tree.
 
-from .base import BaseSupplierModule
-from .strategies import FirstSupplierStrategy
 
-__all__ = ["BaseSupplierModule", "FirstSupplierStrategy"]
+class FirstSupplierStrategy(object):
+    def get_supplier(self, **kwargs):
+        shop_product = kwargs["shop_product"]
+        return shop_product.suppliers.enabled(shop=shop_product.shop).first()
