@@ -1,18 +1,26 @@
-"""
-Sphinx Shoop theme.
+# This file is part of Shuup.
+#
+# Copyright (c) 2012-2021, Shuup Commerce Inc. All rights reserved.
+#
+# This source code is licensed under the OSL-3.0 license found in the
+# LICENSE file in the root directory of this source tree.
+from shuup.apps import AppConfig
 
-This theme is a fork of Sphinx ReadTheDocs theme from
-https://github.com/snide/sphinx_rtd_theme/.
-"""
-import os
+from .manager import add_enabled_addons
 
-__version__ = "0.6.0"
-__version_full__ = __version__
-
-VERSION = tuple(int(x) for x in __version__.split("."))
+__all__ = ["add_enabled_addons"]
 
 
-def get_html_theme_path():
-    """Return list of HTML theme paths."""
-    cur_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
-    return cur_dir
+class ShuupAddonsAppConfig(AppConfig):
+    name = "shuup.addons"
+    verbose_name = "Shuup Addons"
+    label = "shuup_addons"
+
+    provides = {
+        "admin_module": [
+            "shuup.addons.admin_module:AddonModule",
+        ]
+    }
+
+
+default_app_config = "shuup.addons.ShuupAddonsAppConfig"
