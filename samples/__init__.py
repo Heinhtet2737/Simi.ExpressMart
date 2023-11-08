@@ -4,4 +4,12 @@
 #
 # This source code is licensed under the OSL-3.0 license found in the
 # LICENSE file in the root directory of this source tree.
-default_app_config = __name__ + ".apps.AppConfig"
+import os
+
+
+def get_sample_file_content(file_name):
+    path = os.path.join(os.path.dirname(__file__), file_name)
+    if os.path.exists(path):
+        from six import BytesIO
+
+        return BytesIO(open(path, "rb").read())
