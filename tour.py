@@ -5,15 +5,16 @@
 #
 # This source code is licensed under the OSL-3.0 license found in the
 # LICENSE file in the root directory of this source tree.
-from django.http import JsonResponse
-from django.views.generic import TemplateView, View
+
+from django.http.response import JsonResponse
+from django.views.generic import View
+
+from shuup.admin.shop_provider import get_shop
+from shuup.admin.utils.tour import set_tour_complete
 
 
-class MenuView(TemplateView):
-    template_name = "shuup/admin/base/_main_menu.jinja"
-
-
-class MenuToggleView(View):
+class TourView(View):
     def post(self, request, *args, **kwargs):
-        request.session["menu_open"] = not bool(request.session.get("menu_open", True))
+        tour_key = request.POST.get("tourKey", "")
+        set_tour_complete(get_shop(request), tour_key, True, request.user)
         return JsonResponse({"success": True})
