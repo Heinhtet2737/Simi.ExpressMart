@@ -3,16 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Frank Wickström <frwickst@gmail.com>, 2017
 # Panu Tulimäki <panu@shuup.com>, 2020
 # William Lindholm <william.lindholm@shuup.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Shuup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 15:24+0000\n"
-"PO-Revision-Date: 2021-07-14 20:24+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2021-08-03 16:47+0000\n"
+"PO-Revision-Date: 2021-08-03 19:14+0000\n"
+"Last-Translator: Christian Hess\n"
 "Language-Team: Swedish (Sweden) (http://www.transifex.com/shuup/shuup/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,1345 +19,639 @@ msgstr ""
 "Generated-By: Babel 2.1.1\n"
 "Language: sv_SE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.8\n"
 
-msgid "Abandoned Cart Value"
-msgstr "Värde på den övergivna varukorgen"
+msgid "Theme identifiers must match."
+msgstr "Temaidentifierare måste matcha."
 
-#, python-brace-format
-msgid "Based on {b} carts over the last {d} days"
-msgstr "Baserat på {b} varukorgar under de senaste {d} dagar"
+msgid "Either theme_settings or shop should be informed."
+msgstr "Antingen temainställningar eller butiker bör informeras."
 
-msgid "Carts"
-msgstr "Varukorgar"
+msgid "Global plugins"
+msgstr "Globala insticksmoduler"
 
-msgid "Show carts"
-msgstr "Visa varukorgar"
+msgid "Theme plugins"
+msgstr "Temats insticksmoduler"
 
-msgid "Cart Inactivity Delay (hours)"
-msgstr "Vagnens inaktivitetsfördröjning (timmar)"
+msgid "Shuup Extensible Theme Engine"
+msgstr "Shuup temamotor"
 
-msgid ""
-"Set the number of hours the cart must be inactive before it's displayed in "
-"Orders > Carts"
-msgstr "Ställ in hur många timmar vagnen måste vara inaktiv innan den visas i Order > Vagnar"
+msgid "Themes"
+msgstr "Teman"
 
-msgid "Key"
+msgid "Customize the look and feel of your shop"
+msgstr "Anpassa utseendet och känslan av din butik"
+
+msgid "Customize theme"
+msgstr "Anpassa tema"
+
+msgid "No theme is active. Click here to activate one."
+msgstr "Inget aktiverat tema. Klicka här för att aktivera ett."
+
+msgid "Theming"
+msgstr "Ställ in tema"
+
+msgid "Shuup Extensible Theme Engine Fonts"
 msgstr ""
 
-msgid "Last updated on"
-msgstr "Senast uppdaterad den"
-
-msgid "Completed"
+msgid "Fonts"
 msgstr ""
 
-msgid "yes"
-msgstr "ja"
-
-msgid "no"
-msgstr "nej"
-
-msgid "Shop"
-msgstr "Butik"
-
-msgid "Supplier"
+msgid "Allow the user to select fonts in admin."
 msgstr ""
 
-msgid "Customer"
-msgstr "Kund"
+msgid "Shuup Extensible Theme Engine Snippets"
+msgstr "Shuup Extensible Theme Engine Snippets"
 
-msgid "Product count"
-msgstr "Antal produkter"
+msgid "Snippets"
+msgstr "Utdrag"
 
-msgid "Total"
-msgstr "Summa"
-
-msgid "Created on"
-msgstr "Skapad den"
-
-msgid "Ordered"
-msgstr "Beställd"
-
-msgid "Require shipping method"
-msgstr "Kräver fraktmetod"
-
-msgid "Whether to require the shipping method in checkout phases."
-msgstr "Krävs val av fraktmetoden kassa faserna."
-
-msgid "Require payment method"
-msgstr "Kräva betalningsmetod"
-
-msgid "Whether to require the payment method in checkout phases."
-msgstr "Krävs val av betalningsmetoden i kassa faserna."
-
-msgid "Registration Settings"
-msgstr "Registrerings Inställningar"
-
-msgid "Allow company registration"
-msgstr "Tillåt företagsregistrering"
-
-msgid "If you select this, companies can register into your store."
-msgstr "Om du väljer detta kan företag registrera sig i din butik."
-
-msgid "Company registration requires approval"
-msgstr "Företagsregistrering kräver godkännande"
+msgid "Theme Custom CSS/JS"
+msgstr "Tema Anpassad CSS / JS"
 
 msgid ""
-"Registered companies must be manually approved by admin if this is checked. "
-"This option has no effect if company registration is not allowed on your "
-"site."
-msgstr "Registrerade företag måste godkännas manuellt av admin om detta är markerat. Det här alternativet har ingen effekt om företagsregistrering inte är tillåten på din webbplats."
+"Select the themes that will have this snippet injected. Leave the field "
+"blank to inject in all themes."
+msgstr "Välj de teman som det här utdraget ska läggas med. Lämna fältet tomt för att lägga med i alla teman."
 
-msgid "Company tax number validation"
-msgstr "Validering av företagsskattnummer"
+msgid "Select the location of the page to inject the snippet."
+msgstr "Välj platsen för sidan där du vill injicera kodavsnittet."
 
-msgid "Company tax number format is validated for European countries."
-msgstr "Företagsskatt nummerformat valideras för europeiska länder."
+msgid "Name"
+msgstr ""
 
-msgid "Override shop's default configuration"
-msgstr "Åsidosätt butikens standardkonfiguration"
+msgid "Filter by name..."
+msgstr ""
 
-msgid ""
-"If checked, this configuration will be used instead of the shop's default "
-"configuration."
-msgstr "Om det är markerat kommer denna konfiguration att användas istället för butikens standardkonfiguration."
+msgid "Location"
+msgstr "Plats"
 
-msgid "Available languages in storefront"
-msgstr "Tillgängliga språk på webbplatsen"
+msgid "Filter by location..."
+msgstr "Filtrera efter plats ..."
 
-msgid ""
-"Select all the languages that should be available in storefront. Blank means"
-" that all languages should be available."
-msgstr "Välj alla språk som ska finnas tillgängliga på webbplatsen. Tom betyder att alla språk är tillgängliga."
+msgid "Type"
+msgstr "Typ"
 
-msgid "Try to remove some products from the basket and order them separately."
-msgstr "Försök ta bort vissa produkter från korgen och beställ dem separat."
+msgid "activate"
+msgstr "aktivera"
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "Choose a theme for your shop"
+msgstr "Välj ett tema för din butik"
+
+msgid "Theme activated."
+msgstr "Tema aktiverat."
+
+msgid "Custom CSS/JS"
+msgstr "Anpassad CSS / JS"
+
+msgid "Woff"
+msgstr ""
+
+msgid "Woff2"
+msgstr ""
+
+msgid "TTF"
+msgstr ""
+
+msgid "SVG"
+msgstr ""
+
+msgid "EOT"
+msgstr ""
+
+msgid "Stylesheets"
+msgstr "Utseendemallar"
+
+msgid "The fonts, colors, and styles to use with your theme."
+msgstr "Typsnitt, färger och annan styling för ditt tema."
+
+msgid "Choose the primary color:"
+msgstr ""
+
+msgid "Choose the secondary color:"
+msgstr ""
+
+msgid "Choose the primary text color:"
+msgstr ""
+
+msgid "Choose the success (green) style primary color:"
+msgstr ""
+
+msgid "Choose the danger (red) style primary color:"
+msgstr ""
+
+msgid "Admin Header Font"
+msgstr ""
+
+msgid "Admin Body Font"
+msgstr ""
+
+msgid "Failed to render the plugin"
+msgstr ""
+
+msgid "Content in this box is shown to all user types without limitations."
+msgstr "Innehållet i denna ruta visas för alla användartyper utan begränsningar."
 
 #, python-format
-msgid "Products in basket can't be shipped together. %s"
-msgstr "Produkter i korgen kan inte levereras tillsammans. %s"
+msgid ""
+"Content in this placeholder is shown for %(category_name)s category only."
+msgstr "Innehållet i denna platshållare visas endast för kategorin %(category_name)s."
+
+msgid "Content in this box is shown to guests (anonymous users) only."
+msgstr "Innehållet i denna ruta visas endast för gäster (anonyma användare)."
+
+msgid "Content in this box is shown to company contacts only."
+msgstr "Innehållet i denna ruta visas endast för företagskontakter."
+
+msgid ""
+"Content in this box is shown to all logged-in contacts (both person and "
+"company; not anonymous)."
+msgstr "Innehållet i denna ruta visas för alla inloggade kontakter (både person och företag; inte anonymt)."
+
+msgid "Content in this box is shown to person contacts only."
+msgstr "Innehållet i denna ruta visas endast för personkontakter."
 
 #, python-format
-msgid "Products in basket have no common payment method. %s"
-msgstr "Produkter i korgen har ingen gemensam betalningsmetod. %s"
+msgid "Content in this placeholder is shown for %(product_name)s only."
+msgstr "Innehållet i denna platshållare visas endast för %(product_name)s."
 
-msgid "Tax number is required with the company name."
-msgstr "Skattnummer krävs med företagsnamnet."
+msgid "Shop '{}' has no active theme"
+msgstr "Butiken '{}' har inget aktivt tema"
 
-msgid "Company name is required with the tax number."
-msgstr "Företagsnamn krävs med skattenummer."
+msgid "Inline JavaScript"
+msgstr "Inbyggd JavaScript"
 
-msgid "Use a saved address"
-msgstr "Använd en sparad adress"
+msgid "Inline CSS"
+msgstr "Inbyggd CSS"
 
-msgid "Addresses"
-msgstr "Adresser"
+msgid "Inline HTML"
+msgstr "Inbyggd HTML"
 
-msgid "Saved addresses."
+msgid "Inline Jinja HTML"
 msgstr ""
 
-msgid "Checkout as Guest"
-msgstr "Gå till kassan som gäst"
+msgid "current draft"
+msgstr "nuvarande utkast"
 
-msgid "Register"
-msgstr "Registrera"
+msgid "old version"
+msgstr "gammal version"
 
-msgid "Register with us for future convenience"
-msgstr "Registrera dig med oss ​​för att förenkla framtida köp"
+msgid "public"
+msgstr "offentlig"
 
-msgid "Checkout Method Choice"
-msgstr "Metod för Gå till kassan"
+msgid "theme identifier"
+msgstr "temaidentifierare"
 
-msgid "I accept the terms and conditions"
-msgstr "Jag accepterar användarvillkoren"
-
-msgid "I want to receive marketing material"
-msgstr "Jag vill motta marknadsföringsmaterial"
-
-msgid "Comment"
-msgstr "Kommentar"
-
-msgid ""
-"There has been a change in product availability. Please review your cart and"
-" reconfirm your order."
-msgstr "Produktens tillgänglighet har ändrats. Vänliga gå över din varukort och återbekräfta din beställning."
-
-msgid "Confirmation"
-msgstr "Bekräftelse"
-
-msgid "Starting to create order."
-msgstr ""
-
-msgid "Empty Basket"
-msgstr "Töm varukorg"
-
-msgid "shipping method"
-msgstr "leveranssätt"
-
-msgid "payment method"
-msgstr "betalnigssätt"
-
-msgid "Shipping & Payment"
-msgstr "Leverans & Betalning"
-
-msgid "Saved services."
-msgstr ""
-
-msgid "Sort products by name"
-msgstr "Sortera produkter enligt namn"
-
-msgid "Ordering for sort by name"
-msgstr "Ordning vid sortering enligt namn"
-
-msgid "Sort"
-msgstr "Sortera"
-
-msgid "Name - A-Z"
-msgstr "Namn - A-Ö"
-
-msgid "Name - Z-A"
-msgstr "Namn - Ö-A"
-
-msgid "Enable this to allow products to be sortable by product name."
-msgstr "Aktivera detta så att produkter kan sorteras efter produktnamn."
-
-msgid ""
-"Use a numeric value to set the order in which the the filter will appear on "
-"the product listing page."
-msgstr "Använd ett numeriskt värde för att ställa in i vilken ordning filtret visas i produktlistan."
-
-msgid "Sort products by price"
-msgstr "Sortera produkter enligt pris"
-
-msgid "Ordering for sort by price"
-msgstr "Ordning vid sortering enligt pris"
-
-msgid "Price - Low to High"
-msgstr "Pris - stigande"
-
-msgid "Price - High to Low"
-msgstr "Pris - fallande"
-
-msgid ""
-"Enable this to allow products to be sortable by price (from low to high; "
-"from high to low)."
-msgstr "Aktivera detta för att låta produkter sorteras efter pris (från låg till hög; från hög till låg)."
-
-msgid "Sort products by date created"
-msgstr "Sortera produkter enligt datumet de skapades"
-
-msgid "Ordering for sort by date created"
-msgstr "Ordning vid sortering av produkter enligt datumet de skapades"
-
-msgid "Date created"
-msgstr "Skapad den"
-
-msgid ""
-"Enable this to allow products to be sortable from newest to oldest products."
-msgstr "Aktivera detta för att tillåta att produkter kan sorteras från nyaste till äldsta produkter."
-
-msgid ""
-"Use a numeric value to set the order in which the filter will appear on the "
-"product listing page."
-msgstr "Använd ett numeriskt värde för att ställa in i vilken ordning filtret visas på produktlistan sidan."
-
-msgid "Sort products by date created - oldest first"
-msgstr "Sortera produkter enligt datumet de skapades - äldsta först"
-
-msgid "Ordering for sort by date created - oldest first"
-msgstr "Ordning vid sortering av produkter enligt datumet de skapades - äldsta först"
-
-msgid "Date created - oldest first"
-msgstr "Skapad den - äldsta först"
-
-msgid ""
-"Enable this to allow products to be sortable from oldest to newest products."
-msgstr "Aktivera detta för att tillåta att produkter kan sorteras från äldsta till nyaste produkter."
-
-msgid "Filter products by manufacturer"
-msgstr "Filtrera produkter enligt tillverkare"
-
-msgid "Ordering for filter by manufacturer"
-msgstr "Ordning vid sortering enligt tillverkare"
-
-msgid "Manufacturers"
-msgstr "Tillverkare"
-
-msgid ""
-"Enable this to allow products to be filterable by manufacturer for this "
-"category."
-msgstr "Aktivera detta för att tillåta att produkter kan filtreras av tillverkare för denna kategori."
-
-msgid ""
-"Use a numeric value to set the order in which the manufacturer filters will "
-"appear on the product listing page."
-msgstr "Använd ett numeriskt värde för att ställa in i vilken ordning tillverkarfiltret visas i produktlistan."
-
-msgid "Filter products by category"
-msgstr "Filtrera produkter enligt kategori"
-
-msgid "Ordering for filter by category"
-msgstr "Ordning vid filtrering av produkter enligt kategori"
-
-msgid "Categories"
-msgstr "Kategorier"
-
-msgid ""
-"Enable this to allow products to be filterable by any visible product "
-"category. "
-msgstr "Aktivera detta för att tillåta att produkter kan filtreras efter någon synlig produktkategori."
-
-msgid ""
-"Use a numeric value to set the order in which the category list filters will"
-" appear on the product listing page."
-msgstr "Använd ett numeriskt värde för att ställa in i vilken ordning kategorilistans filter visas i produktlistan."
-
-msgid "Limit page size"
-msgstr "Begränsa sidstorlek"
-
-msgid "Ordering for limit page size"
-msgstr "Ordning för begränsning av sidstorlek"
-
-msgid "Products per page"
-msgstr "Produkter per sida"
-
-msgid ""
-"Enable this to allow the customer to be able to select the number of "
-"products to display."
-msgstr "Aktivera detta så att kunden kan välja antalet produkter som ska visas."
-
-msgid ""
-"Use a numeric value to set the order in which the page size filter will "
-"appear on the product listing page."
-msgstr "Använd ett numeriskt värde för att ställa in i vilken ordning filtret för sidstorleken visas i produktlistan."
-
-msgid "Filter products by variation"
-msgstr "Filtrera produkter enligt variant"
-
-msgid "Ordering for filter by variation"
-msgstr "Ordning för filtrering enligt variant"
-
-msgid ""
-"Enable this to allow products to be filterable by their different "
-"variations. For example, size or color."
-msgstr "Aktivera detta så att produkter kan filtreras efter olika variationer. Till exempel storlek eller färg."
-
-msgid ""
-"Use a numeric value to set the order in which the variation filters will "
-"appear on the product listing page."
-msgstr "Använd ett numeriskt värde för att ställa in i vilken ordning filtret för varianter visas på produktlistan sidan."
-
-msgid "Filter products by price"
-msgstr "Filtrera produkter enligt pris"
-
-msgid "Ordering for filter by price"
-msgstr "Ordning för filtrering enligt pris"
-
-msgid "Price"
-msgstr "Pris"
-
-msgid ""
-"Enable this to allow products to be filtered by price. Prices will be listed"
-" in groups from the price range minimum to price range maximum in increments"
-" of the configured price range step."
-msgstr "Aktivera detta för att tillåta att produkter filtreras efter pris. Priserna kommer att anges i grupper från prisintervallet minimalt till prisintervall i steg i det konfigurerade prisintervallsteget."
-
-msgid ""
-"Use a numeric value to set the order in which the price range filters will "
-"appear on the product listing page."
-msgstr "Använd ett numeriskt värde för att ställa in i vilken ordning prisklass filter visas på produktlistan sidan."
-
-msgid "Price range minimum"
-msgstr "Prisintervallets minimivärde"
-
-msgid ""
-"Set the minimum price for the filter. The first range will be from zero to "
-"this value."
-msgstr "Ställ minimipriset för filtret. Det första området kommer att vara från noll till detta värde."
-
-msgid "Price range maximum"
-msgstr "Price range maxvärde"
-
-msgid ""
-"Set the maximum price for the filter. The last range will include this value"
-" and above."
-msgstr "Ställ det högsta priset för filtret. Det sista området kommer att inkludera detta värde och ovan."
-
-msgid "Price range step"
-msgstr "Prisintervall"
-
-msgid ""
-"Set the price step for each range. Each range will increment by this value."
-msgstr "Sätta priset steg för varje intervall. Varje intervall kommer öka med detta värde."
-
-msgid "Filter products by its attributes"
-msgstr ""
-
-msgid "Allow products to be filtered according to their attributes."
-msgstr ""
-
-msgid "Attributes that can be filtered"
-msgstr ""
-
-msgid "Select attributes that can used for filtering the products."
-msgstr ""
-
-#, python-format
-msgid "Under %(min_limit)s"
-msgstr "Under %(min_limit)s"
-
-#, python-format
-msgid "%(min)s to %(max)s"
-msgstr "%(min)s till %(max)s"
-
-#, python-format
-msgid "%(max_limit)s & Above"
-msgstr "%(max_limit)s och över"
-
-msgid "Filter products by supplier"
-msgstr "Filtrera produkter efter leverantör"
-
-msgid "Ordering for filter by supplier"
-msgstr "Beställa filter efter leverantör"
-
-msgid "Suppliers"
-msgstr "Leverantörer"
-
-msgid "Enable this to allow products to be filterable by supplier."
-msgstr "Aktivera detta så att produkter kan filtreras av leverantör."
-
-msgid ""
-"Use a numeric value to set the order in which the supplier filters will "
-"appear."
-msgstr "Använd ett numeriskt värde för att ställa in den ordning i vilken leverantörsfiltret ska visas."
-
-msgid "Allow multiselect suppliers"
-msgstr "Tillåt leverantörer med flera val"
-
-msgid "Filter by multiple suppliers at a time."
-msgstr "Filtrera efter flera leverantörer åt gången."
-
-msgid "Logged out since this account is inactive."
-msgstr "Du har loggats ut eftersom det här kontot är inaktivt."
-
-msgid "key"
-msgstr "nyckel"
-
-msgid "shop"
-msgstr "butik"
-
-msgid "supplier"
-msgstr ""
-
-msgid "customer"
-msgstr "kund"
-
-msgid "orderer"
-msgstr "beställaren"
-
-msgid "creator"
-msgstr "skapare"
+msgid "view name"
+msgstr "vynamn"
 
 msgid "created on"
 msgstr "skapad den"
 
-msgid "updated on"
-msgstr "uppdaterad den"
+msgid "modified on"
+msgstr ""
 
-msgid "persistent"
-msgstr "långlivad"
+msgid "status"
+msgstr "status"
 
-msgid "deleted"
-msgstr "borttagen"
+msgid "internal data"
+msgstr "intern information"
 
-msgid "finished"
-msgstr "avslutad"
-
-msgid "title"
-msgstr "titel"
+msgid "active"
+msgstr "aktiv"
 
 msgid "data"
-msgstr "data"
+msgstr "information"
 
-msgid "taxless total price"
-msgstr "pris (exkl. skatter)"
+#, python-format
+msgid "Theme configuration for %s"
+msgstr "Konfiguration för temat %s"
 
-msgid "taxful total price"
-msgstr "pris (inkl. skatter)"
-
-msgid "currency"
-msgstr "valuta"
-
-msgid "prices include tax"
-msgstr "pris (inkl. skatter)"
-
-msgid "product_count"
-msgstr "produktantal"
-
-msgid "products"
-msgstr "produkter"
-
-msgid "class spec"
+msgid "Shop"
 msgstr ""
 
-msgid "stored basket"
-msgstr "lagrad korg"
-
-msgid "stored baskets"
-msgstr "lagrade korgar"
-
-msgid "ID"
-msgstr "ID"
-
-msgid "Reference Number"
-msgstr "Referensnummer"
-
-msgid "Currency"
-msgstr "Valuta"
-
-msgid "Customer Name"
-msgstr "Köparens namn"
-
-msgid "Status"
-msgstr "Status"
-
-msgid "Shipping Method"
-msgstr "Frakt metod"
-
-msgid "Order Received"
-msgstr "Beställning mottagen"
-
-msgid "Order"
-msgstr "Beställning"
-
-msgid "Customer Email"
-msgstr "Kundens e-post"
-
-msgid "Customer Phone"
-msgstr "Kundens telefonnummer"
-
-msgid "Shop Email"
-msgstr "Butikens e-post"
-
-msgid "Shop Phone"
-msgstr "Butikens telefonnummer"
-
-msgid "Language"
-msgstr "Språk"
-
-msgid "Order Status Changed"
-msgstr "Orderstatus ändrad"
-
-msgid "Old Status"
-msgstr "Gammal status"
-
-msgid "New Status"
-msgstr "Ny status"
-
-msgid "Shipment Created"
-msgstr "Leverans skapad"
-
-msgid "Shipment"
-msgstr "Leverans"
-
-msgid "Order Shipping Status"
-msgstr "Beställningens leveransstatus"
-
-msgid "Shipment Status"
-msgstr "Leveransstatus"
-
-msgid "Shipment Tracking Code"
+msgid "name"
 msgstr ""
 
-msgid "Shipment Tracking URL"
+msgid "Font family name"
 msgstr ""
 
-msgid "Shipment Sent"
+msgid "Font Family CSS Property"
 msgstr ""
-
-msgid "Shipment Deleted"
-msgstr "Leverans borttagen"
-
-msgid "Payment Created"
-msgstr "Betalning skapad"
-
-msgid "Order Payment Status"
-msgstr "Beställningens betalningsstatus"
-
-msgid "Payment"
-msgstr "Betalning"
-
-msgid "Refund Created"
-msgstr "Återbetalning skapad"
 
 msgid ""
-"<p>Dear {{ order.customer }},</p>\n"
-"<p>A shipment has been created for your order and here are the details:</p>\n"
-"\n"
-"{% if shipment.tracking_code %}\n"
-"<p>Tracking code: {{ shipment.tracking_code }}</p>\n"
-"{% endif %}\n"
-"\n"
-"<p>Contents:</p>\n"
-"<table>\n"
-"    <thead>\n"
-"        <tr>\n"
-"            <th>Product</th>\n"
-"            <th>Quantity</th>\n"
-"        </tr>\n"
-"    </thead>\n"
-"    <tbody>\n"
-"{% for shipment_product in shipments.total_products %}\n"
-"        <tr>\n"
-"            <td>{{ shipment_product.product }}</td>\n"
-"            <td>{{ shipment_product.quantity }}</td>\n"
-"        </tr>\n"
-"{% endif %}\n"
-"    </tbody>\n"
-"</table>\n"
-msgstr "<p> Hej {{ order.customer }},</p>\n<p>En leverans har skapats för din beställning, här är detaljer angående leveransen:</p>\n\n{% if shipment.tracking_code %}\n<p>Spårningskod: {{ shipment.tracking_code }}</p>\n{% endif %}\n\n<p>Innehåll:</p>\n<table>\n    <thead>\n        <tr>\n            <th>Produkt</th>\n            <th>Antal</th>\n        </tr>\n    </thead>\n    <tbody>\n{% for shipment_product in shipments.total_products %}\n        <tr>\n            <td>{{ shipment_product.product }}</td>\n            <td>{{ shipment_product.quantity }}</td>\n        </tr>\n{% endif %}\n    </tbody>\n</table>\n"
-
-msgid "Send Shipment Created Email"
-msgstr "Sänd epost gällande skapad leverans"
-
-msgid "Send an email to customer when a shipment is created."
-msgstr "Skicka ett epostmeddelande till kunden då en leverans har skapats."
-
-msgid ""
-"This script will send an email to customer when a shipment of his order has "
-"been created."
-msgstr "Detta script kommer att sända ett epostmeddelande till kunden då beställningens leverans är skapad."
-
-msgid "{{ order.shop }} - Shipment created for order {{ order.identifier }}"
-msgstr "{{ order.shop }} - Leverans skapad för beställningen {{ order.identifier }}"
-
-msgid "Send Shipment Deleted Email"
-msgstr "Sänd epost gällande borttagen leverans"
-
-msgid "Send email when a shipment is deleted."
-msgstr "Skicka ett epostmeddelande när leveransen är borttagen."
-
-msgid ""
-"This script will send an email to customer or to any configured email right "
-"after a shipment gets deleted."
-msgstr "Detta script kommer att sända ett epostmeddelande till kunden då beställningens leverans är borttagen."
-
-msgid "{{ order.shop }} - Shipment deleted for order {{ order.identifier }}"
-msgstr "{{ order.shop }} - Leverans borttagen för beställningen {{ order.identifier }}"
-
-msgid "Send Payment Created Email"
-msgstr "Sänd epost gällande beställningens betalning"
-
-msgid "Send email to customer when a payment is created."
-msgstr "Sänd ett epostmeddelande då en betalning har gjorts."
-
-msgid ""
-"This script will send an email to customer or to any configured email right "
-"after a payment gets created."
-msgstr "Detta script kommer att sända ett epostmeddelande till kunden då en betalning för beställningen har gjorts."
-
-msgid "{{ order.shop }} - Payment created for order {{ order.identifier }}"
-msgstr "{{ order.shop }} - En betalning har gjorts för beställningen {{ order.identifier }}"
-
-msgid "Send Refund Created Email"
-msgstr "Sänd epost vid återbetalning"
-
-msgid "Send email when a refund is created."
-msgstr "Skicka ett epostmeddelande då en återbetalning har skapats."
-
-msgid ""
-"This script will send an email to customer or to any configured email right "
-"after a refund gets created."
-msgstr "Detta script kommer att sända ett epostmeddelande till kunden då en återbetalning för beställningen har gjorts."
-
-msgid "{{ order.shop }} - Refund created for order {{ order.identifier }}"
-msgstr "{{ order.shop }} - En återbetalning har gjorts för beställningen {{ order.identifier }}"
-
-msgid "Send Order Confirmation Email"
-msgstr "Skicka orderbekräftelse epost"
-
-msgid "Send a confirmation email when the order is created."
-msgstr "Skicka ett epostmeddelande när en beställning har skapats."
-
-msgid ""
-"This script will send an email to customer or to any configured email right "
-"after an order is created. The order contents can be put on email body as "
-"well as other informations like shipping method and payment method."
-msgstr "Detta script kommer att sända ett epostmeddelande till kunden eller den epostaddress som är specificerad när beställningen skapats. Beställningens innehåll kan vara del av meddelandet så även information om beställningens leverans och betalningssätt."
-
-msgid "Cart Inactivity Delay"
-msgstr "Vagnens inaktivitetsfördröjning"
-
-msgid "Checkout configuration"
-msgstr "Kassa konfiguration"
-
-msgid "Product list sorts and filters"
-msgstr "Produktlistans sorterings och filtreringsmöjligheter"
-
-msgid "Vendor"
+"(Optional) Input css font family property directly. Ex: font-family: Roboto;"
 msgstr ""
 
-msgid "Created Date"
+msgid "WOFF Font"
 msgstr ""
 
-msgid "Updated Date"
+msgid "WOFF2 Font"
 msgstr ""
 
-msgid "Ordered by"
+msgid "TTF font"
 msgstr ""
 
-msgid "Email"
+msgid "SVG font"
 msgstr ""
 
-msgid "Phone"
+msgid "EOT font"
 msgstr ""
 
-msgid "Tax Number"
+msgid "Font Family"
 msgstr ""
 
-msgid "Customer Comment"
+msgid "Font Families"
 msgstr ""
 
-msgid "Payment Method"
+msgid "primary color"
 msgstr ""
 
-msgid "Total Price"
+msgid "secondary color"
 msgstr ""
 
-msgid "Address Information"
+msgid "text color"
 msgstr ""
 
-msgid "Billing address"
-msgstr "Faktureringsadress"
-
-msgid "No billing address defined."
+msgid "success color"
 msgstr ""
 
-msgid "Shipping address"
-msgstr "Leveransadress"
-
-msgid "No shipping address defined."
+msgid "danger color"
 msgstr ""
 
-msgid "Lines"
+msgid "base font size"
 msgstr ""
 
-msgid "SKU"
-msgstr "Artikelnummer"
-
-msgid "Text"
+#, python-format
+msgid "Admin Theme configuration for %s"
 msgstr ""
 
-msgid "Taxless Unit Price"
+msgid "snippet name"
 msgstr ""
 
-msgid "Quantity"
+msgid "Untitled"
+msgstr ""
+
+msgid "location"
+msgstr "plats"
+
+msgid "snippet type"
+msgstr "kodavsnitt typ"
+
+msgid "snippet"
+msgstr "kodavsnitt"
+
+msgid "themes"
+msgstr "teman"
+
+msgid "Snippet"
+msgstr "Kodavsnitt"
+
+msgid "Plugin"
+msgstr "Insticksmodul"
+
+msgid "Categories"
+msgstr "Kategorier"
+
+msgid "Category Links"
+msgstr "Kategorilänkar"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Show all categories"
+msgstr "Visa alla kategorier"
+
+msgid "All categories are shown, even if not selected"
+msgstr "Alla kategorier visas, även om detta inte är valt"
+
+msgid "Image"
+msgstr "Bild"
+
+msgid "Image Link URL"
+msgstr "Bildens webbadress"
+
+msgid "Full width"
+msgstr "Fullständig bredd"
+
+msgid "Set image to the full width of cell."
+msgstr "Ställ in bilden på cellens fulla bredd."
+
+msgid "Width (px)"
+msgstr "Bredd (px)"
+
+msgid "Leave blank for default width."
+msgstr "Lämna tomt för standardbredd."
+
+msgid "Height (px)"
+msgstr "Höjd (px)"
+
+msgid "Newest"
+msgstr "Nyaste"
+
+msgid "Best Selling"
+msgstr "Bästsäljande"
+
+msgid "Random"
+msgstr "Slumpmässig"
+
+msgid "Product Highlights"
+msgstr "Produkthöjdpunkter"
+
+msgid "Count"
 msgstr "Antal"
 
-msgid "Taxless Discount"
-msgstr ""
-
-msgid "Taxless Discount Percentage"
-msgstr ""
-
-msgid "Tax"
-msgstr "Skatt"
-
-msgid "Taxless Total"
-msgstr ""
-
-msgid "Total incl. Tax"
-msgstr ""
-
-#, python-format
-msgid "Supplied by %(supplier)s"
-msgstr ""
-
-msgid "Discount"
-msgstr ""
-
-msgid "Taxless"
-msgstr ""
-
-msgid "Logs"
-msgstr ""
-
-msgid "Date"
-msgstr ""
-
-msgid "Type"
-msgstr ""
-
-msgid "Message"
-msgstr ""
-
-msgid "Extra"
-msgstr ""
-
-msgid "Storefront Languages"
-msgstr "Webbplatsens Språk"
-
-msgid "Shopping cart"
-msgstr "Varukorg"
-
-msgid "Your shopping cart is empty."
-msgstr "Din kundvagn är tom."
-
-msgid "There were errors on following items"
-msgstr "Fel hittades i de följande produkterna"
-
-msgid "You are unable to proceed to checkout!"
-msgstr "Du kan inte gå vidare till kassan!"
-
-msgid "Checkout"
-msgstr "Kassa"
-
-msgid "Error! Please reload the page or move to previous step."
-msgstr ""
-
-msgid "Log in"
-msgstr "Logga in"
-
-msgid "Forgot your password?"
-msgstr "Glömt ditt lösenord?"
-
-msgid "There are errors"
-msgstr "Fel uppstod"
-
-msgid "Please wait..."
-msgstr "Vänta..."
-
-msgid "My Dashboard"
-msgstr "Min översikt"
-
-msgid "Dashboard"
-msgstr "Översikt"
-
-msgid "Home"
-msgstr "Start"
-
-msgid "Bad Request"
-msgstr "Felaktig begäran"
-
-msgid "Unfortunately the server couldn't process your request."
-msgstr "Servern påträffade ett fel under behandling av din begäran."
-
-msgid "Back to Homepage"
-msgstr "Tillbaka till hemsidan"
-
-msgid "Permission Denied"
-msgstr "Tillstånd nekades"
-
-msgid "Unfortunately you didn't have permission to display this page."
-msgstr "Tyvärr har du inte tillstånd att visa den här sidan."
-
-msgid "Page Not Found"
-msgstr "Sidan finns inte"
-
-msgid "Unfortunately the page you were looking for does not exist."
-msgstr "Tyvärr finns inte sidan du söker."
-
-msgid "Go Back"
-msgstr "Gå tillbaka"
-
-msgid "Internal Server Error"
-msgstr "Internt serverfel"
+msgid "Only show in-stock and orderable items"
+msgstr "Visas endast produkter som finns i lager och är beställningsbara"
 
 msgid ""
-"Unfortunately an internal server error occurred. Try refreshing the page or "
-"try again later."
-msgstr "Tyvärr inträffade ett internt serverfel. Försök att uppdatera sidan eller försök igen senare."
+"Warning: The final number of products can be lower than 'Count' as it will "
+"filter out unorderable products from a set of 'Count' products."
+msgstr "Varning: Det slutliga antalet produkter kan vara lägre än 'Räkna' eftersom det filtrerar bort beställbara produkter från en uppsättning 'Räkna' produkter."
 
-msgid "Welcome to Shuup!"
-msgstr "Välkommen till Shuup!"
+msgid "Product Cross Sells"
+msgstr "Produkters korsförsäljningar"
 
-#, python-format
-msgid "Welcome to %(name)s!"
-msgstr "Välkommen till %(name)s!"
+msgid "Show variation parents"
+msgstr "Visa variationföräldrar"
 
-msgid "your shop"
-msgstr "din butik"
+msgid "Render variation parents instead of the children."
+msgstr "Render variationföräldrar istället för barnen."
 
-msgid ""
-"You are seeing this page because there is no theme selected for the default "
-"frontend."
-msgstr "Du ser denna sida eftersom det finns inget tema som valts för butiken."
+msgid "Category"
+msgstr "Kategori"
 
-msgid "Log in to the administration interface"
-msgstr "Logga in på administrationsgränssnittet"
-
-msgid "to choose a theme and set up your shop."
-msgstr "för att välja ett tema och komma igång med din butik"
-
-msgid ""
-"The administration interface does not seem to be available. Use other means "
-"to choose a theme."
-msgstr "Administrationsgränssnittet verkar inte finnas. Använda andra medel för att välja ett tema."
-
-msgid "Product added to cart"
-msgstr "Produkten tillagd i kundvagnen"
-
-msgid "Adding the product to the basket failed."
-msgstr "Det gick inte att lägga till produkten i korgen."
-
-msgid "Remove product from basket"
-msgstr "Ta bort produkten från korgen"
-
-#, python-brace-format
-msgid "{prop}:"
-msgstr ""
-
-msgid ""
-"The following items are not currently available (or are not available in the"
-" desired quantity) and cannot be included in your order."
-msgstr "Följande objekt inte finns tillgängliga (eller är inte tillgängliga i önskad mängd) och kan inte inkluderas i din beställning."
-
-msgid "Continue Shopping"
-msgstr "Fortsätt handla"
-
-msgid "Proceed to checkout"
-msgstr "Fortsätt till kassan"
-
-msgid "Coupons applied"
-msgstr "Kuponger tillämpas"
-
-msgid "Do you have a coupon code? Enter it here. "
-msgstr "Har du en kupongkod? Ange det här."
-
-msgid "Coupon Code"
-msgstr "Rabattkod"
-
-msgid "Submit Code"
-msgstr "Skicka kod"
-
-msgid "Save cart"
-msgstr "Spara varukorg"
-
-msgid "Cart Title"
-msgstr "Korgens namn"
-
-msgid "Save"
-msgstr "Spara"
-
-msgid "Back to Products"
-msgstr "Tillbaka till produkter"
-
-msgid "Error!"
-msgstr "Fel!"
-
-msgid "Invalid coupon code."
-msgstr "Ogiltig kupongkod."
-
-msgid "Removing a coupon failed."
-msgstr "Det gick inte att ta bort en kupong."
-
-msgid "Coupon is not available."
-msgstr "Rabattkoden är inte giltig."
-
-msgid "Adding a coupon failed."
-msgstr "Det gick inte att lägga till en kupong."
-
-msgid "Success!"
-msgstr "Framgång!"
-
-msgid "Cart saved."
-msgstr "Kundvagnen sparad."
-
-msgid "Filter Products"
-msgstr "Filtrera produkter"
-
-msgid "Show Grid/List"
-msgstr "Visa rutnät/lista"
-
-msgid "Grid/list view"
-msgstr "rutnät/lista"
-
-msgid "Continue"
-msgstr "Fortsätt"
-
-msgid "Ordering for a company?"
-msgstr "Beställning för ett företag?"
-
-msgid "Please fill out these fields if you are ordering for a company."
-msgstr "Fyll i dessa fält om du beställer för ett företag."
-
-msgid "Ship to my billing address"
-msgstr "Leverera till faktureringsadressen"
-
-msgid "Choose Shipping Method"
-msgstr "Välj leveranssätt"
-
-msgid "Choose Payment Method"
-msgstr "Välj betalningssätt"
-
-msgid "No method is available."
-msgstr "Ingen metod är tillgänglig."
-
-msgid "Delivery"
-msgstr "Leverans"
-
-msgid "Delivery method"
-msgstr "Leveranssätt"
-
-msgid "Billing"
-msgstr "Fakturering"
-
-msgid "Payment method"
-msgstr "Betalningssätt"
-
-msgid "Add comment"
-msgstr "Lägg till kommentar"
-
-msgid "Other information"
-msgstr "Annan information"
-
-msgid "Place Order"
-msgstr "Slutför ditt köp"
-
-msgid "Previous"
-msgstr "Föregående"
-
-msgid "Next"
-msgstr "Nästa"
-
-#, python-format
-msgid "Items %(start_index)d to %(end_index)d of %(count)d total"
-msgstr "Objekt %(start_index)d till %(end_index)d av %(count)d totalt"
-
-msgid "Change visibility limit to"
-msgstr "Ändra sikt gränsen till"
-
-msgid "show only visible products and categories"
-msgstr "visa endast synliga produkter och kategorier"
-
-msgid "show all products and categories"
-msgstr "visa alla produkter och kategorier"
-
-msgid "Change customer to person contact mode"
-msgstr "Ändra kontaktläge från kund till person"
-
-msgid "Change customer to company contact mode"
-msgstr "Byt kund till företagskontakt läge"
-
-msgid "Change customer mode to guest"
-msgstr "Ändra kundläge till gäst"
-
-msgid "Tools"
-msgstr "Verktyg"
-
-msgid "Maintenance"
-msgstr "Underhåll"
-
-msgid "Live"
-msgstr "Live"
-
-msgid "Customer mode"
-msgstr "Kundläge"
-
-msgid "GUEST"
-msgstr "GÄST"
-
-msgid "COMPANY CONTACT"
-msgstr "FÖRETAGSKONTAKT"
-
-msgid "PERSON CONTACT"
-msgstr "PERSONSKONTAKT"
-
-msgid "Toggle navigation"
-msgstr "Visa/göm navigering"
-
-#, python-brace-format
-msgid "Edit '{object_title}' in administration page"
-msgstr "Redigera \"{object_title}\" på administrationssidan"
-
-#, python-brace-format
-msgid "Edit {object_name} in Admin"
-msgstr "Redigera {object_name} i Admin"
-
-msgid "Shop Administration"
-msgstr "Butikens administrering"
-
-msgid ""
-"There were errors on submitted form fields. Please check them and try again."
-msgstr "Ett fel inträffade när formuläret skickades. Kontrollera formulärets fält och försök igen."
-
-#, python-format
-msgid "By <strong>%(supplier_name)s</strong>"
-msgstr "Av <strong>%(supplier_name)s</strong>"
-
-#, python-brace-format
-msgid "Available until: <span class=\"availability-date\">{date}</span></small>"
-msgstr "Tillgänglig till: <span class=\"availability-date\">{date}</span></small>"
-
-msgid "Edit account details"
-msgstr "Redigera kontouppgifter"
-
-msgid "Edit company details"
-msgstr "Redigera företagsuppgifter"
-
-msgid "My orders"
-msgstr "Mina beställningar"
-
-msgid "My saved carts"
-msgstr "Mina sparade kudnvagnar"
-
-msgid "My wishlists"
-msgstr "Mina önskelistor"
-
-msgid "Admin panel"
-msgstr "Administratörspanel"
-
-msgid "Log out"
-msgstr "Logga ut"
-
-msgid "New user? Register here!"
-msgstr "Ny användare? Registrera dig här!"
-
-msgid "Cart"
-msgstr "Kundvagn"
-
-msgid "Items"
-msgstr "Artiklar"
-
-msgid "View cart"
-msgstr "Visa kundvagn"
-
-msgid "Menu"
-msgstr "Meny"
+msgid "Category Products Highlight"
+msgstr "Höjdpunkter från produktkategorier"
 
 msgid "Products"
 msgstr "Produkter"
 
-msgid "Files"
-msgstr "Filer"
+msgid "Select all products you want to show"
+msgstr "Välj alla produkter du vill visa"
 
-msgid "No method selected"
-msgstr "Ingen metod vald"
+msgid "Product Selection"
+msgstr "Produktval"
 
-msgid "Product"
-msgstr "Produkt"
+msgid "Product Highlights (asynchronous)"
+msgstr ""
 
-msgid "Unit Price"
-msgstr "Enhetspris"
+msgid "Cutoff days"
+msgstr ""
 
-msgid "excl. tax"
-msgstr "exkl. skatt"
+msgid "Cache timeout (seconds)"
+msgstr ""
 
-msgid "Products ordered"
-msgstr "Beställda produkter"
+msgid "Product Cross Sells (asynchronous)"
+msgstr ""
 
-msgid "Tax breakdown"
-msgstr "Skattuppdelning"
+msgid "Category Products Highlight (asynchronous)"
+msgstr ""
 
-msgid "Tax percentage"
-msgstr "Skatteprocent"
+msgid "Product Selection (asynchronous)"
+msgstr ""
 
-msgid "Based on amount"
-msgstr "Baserat på belopp"
+msgid "In-Place Snippet"
+msgstr "In-place utdrag"
 
-msgid "Amount of tax"
-msgstr "Skattebeloppet"
+msgid "Resource snippet for start of head"
+msgstr ""
 
-msgid "Total including tax"
-msgstr "Totalt inklusive moms"
+msgid "Resource snippet for end of head"
+msgstr "Utdrag från slutet till början"
 
-msgid "Company"
-msgstr "Företag"
+msgid "Resource snippet for beginning of body"
+msgstr "Utdrag för början av sidinnehållet"
 
-msgid "Tax number"
-msgstr "Skattenummer"
+msgid "Resource for end of body"
+msgstr "Utdrag för slutet av sidan"
 
-msgid "Preview"
-msgstr "Förhandsvisa"
-
-msgid "Also available in"
-msgstr "Finns även i"
+msgid "URL"
+msgstr "Webbadress"
 
 #, python-format
-msgid "Save %(discount_percent)s"
-msgstr "Spara %(discount_percent)s"
+msgid "%(name)s Ordering"
+msgstr "%(name)s Beställning"
 
-msgid "Product Information"
-msgstr "Produktinformation"
+msgid "Ordering"
+msgstr "Ordning"
 
-msgid "Includes these products"
-msgstr "Innehåller dessa produkter"
+msgid "Social Media Links"
+msgstr "Länkar till sociala medier"
 
-msgid "No product description available"
-msgstr "Ingen produktbeskrivning tillgänglig"
+msgid "Topic"
+msgstr "Ämnen"
 
-msgid "Barcode"
-msgstr "Streckkod"
+msgid "Icon Size"
+msgstr "Ikonstorlek"
 
-msgid "Manufacturer"
-msgstr "Tillverkare"
+msgid "Default"
+msgstr "Standard"
 
-msgid "Package Size"
-msgstr "Paketstorlek"
+msgid "Large"
+msgstr "Stor"
 
-msgid "Available Until"
-msgstr "Tillgänglig fram till"
+msgid "Alignment"
+msgstr "Placering"
 
-msgid "Width"
-msgstr "Bredd"
+msgid "Left"
+msgstr "Vänster"
 
-msgid "Height"
-msgstr "Höjd"
+msgid "Center"
+msgstr "Centrerad"
 
-msgid "Depth"
-msgstr "Djup"
+msgid "Right"
+msgstr "Höger"
 
-msgid "Net Weight"
-msgstr "Nettovikt"
-
-msgid "Gross Weight"
-msgstr "Bruttovikt"
-
-msgid "External link"
-msgstr "Extern länk"
-
-msgid "Select"
-msgstr "Välj"
-
-msgid "Select product"
-msgstr "Välj produkt"
-
-msgid "One-time purchase"
-msgstr ""
-
-msgid "Subscribe"
-msgstr ""
-
-msgid "Select frequency"
-msgstr ""
-
-msgid "Add to cart"
-msgstr "Lägg i kundvagnen"
-
-#, python-brace-format
-msgid "Available until: {date}"
-msgstr "Tillgänglig till: {date}"
-
-msgid "Maintenance mode"
-msgstr "Underhållsläge"
-
-msgid "Shop is currently down for maintenance."
-msgstr "Butiken är för närvarande nere för underhåll."
-
-msgid "Thank you for your order!"
-msgstr "Tack för din beställning!"
-
-msgid ""
-"Your order has been received. You can see the details of your order below."
-msgstr "Din beställning har mottagits. Du kan se detaljerna om din beställning nedan."
-
-msgid "User account activation"
-msgstr "Kontoaktivering"
-
-msgid ""
-"If you want to be able to see your order history, please create a password "
-"for your account: "
-msgstr "Om du vill kunna se dina gamla beställningar, vänligen skapa ett lösenord för ditt konto: "
-
-msgid "Send"
-msgstr "Skicka"
-
-msgid "Payment canceled"
-msgstr "Betalning avbruten"
-
-msgid "You have canceled payment"
-msgstr "Du har avbrutit betalningen"
-
-msgid "Retry payment"
-msgstr "Vänligen försök åter att göra betalning."
-
-msgid "Error"
-msgstr "Fel"
-
-msgid "Combination not available"
-msgstr "Kombination ej tillgänglig"
-
-msgid "Open product page"
-msgstr "Öppna produktsida"
-
-msgid "Hide prices"
-msgstr "Dölj priser"
-
-msgid "Set shop in catalog mode"
-msgstr "Ställ butik i katalogläge"
-
-msgid "Show supplier info"
-msgstr "Visa leverantörsinformation"
-
-msgid ""
-"Show supplier name in product-box, product-detail, basket- and order-lines"
-msgstr "Visa leverantörens namn i produktlåda, produktdetalj, korg- och orderrader"
-
-msgid "Show Product Details"
-msgstr "Visa produktinformation"
-
-msgid ""
-"If you enable this, extra information will be shown on product page in "
-"frontend."
-msgstr "Om du aktiverar detta kommer extra information att visas på produktsidan i frontend."
-
-msgid "Show Variations as Buttons"
-msgstr "Visa variationer som knappar"
-
-msgid ""
-"If you enable this, the variations will be shown as buttons instead of "
-"dropdowns."
-msgstr "Om du aktiverar detta visas variationerna som knappar istället för rullgardinsmenyer."
-
-msgid "Product detail extra tab title"
-msgstr "Produktdetalj extra flik titel"
-
-msgid "Enter the title for the product detail extra tab."
-msgstr "Ange titeln för extra flik för produktdetaljer."
-
-msgid "Product detail extra tab content"
-msgstr "Produktdetaljer extra flikinnehåll"
-
-msgid "Enter the content for the product detail extra tab."
-msgstr "Ange innehållet för extra flik för produktdetaljer."
-
-msgid "Description"
-msgstr "Beskrivning"
-
-msgid "Details"
-msgstr "Detaljer"
-
-msgid "Attributes"
-msgstr "Attribut"
-
-msgid "Product reviews"
-msgstr "Produktrecensioner"
-
-msgid "Product detail tabs"
-msgstr "Produktdetaljer flikar"
-
-msgid "Select all tabs that should be rendered in product details."
-msgstr "Välj alla flikar som ska återges i produktinformation."
-
-msgid "Tax number is not valid."
-msgstr "Skattenummer är inte giltigt."
-
-msgid "Edit"
-msgstr "Redigera"
-
-#, python-brace-format
-msgid "`{language_code}` is an invalid language code."
-msgstr "\"{language_code}\" är en ogiltig språkkod."
-
-msgid "The order is canceled so you can't pay for it."
-msgstr ""
-
-msgid "Error! This product is not available in this shop."
-msgstr "Fel! Denna produkt finns inte i denna butik."
-
-msgid "Invalid timezone"
-msgstr ""
+msgid "text"
+msgstr "text"
 
 #, python-format
-msgid "Maximum file size reached (%(size)s MB)."
-msgstr "Maximal filstorlek uppnås (%(size)s MB)."
+msgid "Click to edit placeholder: %s"
+msgstr "Klicka för att redigera platshållare: %s"
+
+msgid ""
+"This placeholder is global and content of this placeholder is shown on all "
+"pages."
+msgstr "Denna platshållare är global och innehållet i denna platshållare visas på alla sidor."
+
+msgid "End of head"
+msgstr "Slut på huvudet"
+
+msgid "Start of head"
+msgstr "Början på huvudet"
+
+msgid "End of body"
+msgstr "Slut på kroppen"
+
+msgid "Start of body"
+msgstr "Början av kroppen"
+
+msgid "Content start"
+msgstr "Innehåll start"
+
+msgid "Content end"
+msgstr "Innehållets slut"
+
+msgid "(Error while rendering.)"
+msgstr "(Fel vid rendering.)"
+
+msgid "Delete This Cell"
+msgstr "Ta bort denna cell"
+
+msgid "Untranslated"
+msgstr "Inte översatt"
+
+msgid "There's nothing to configure in this plugin."
+msgstr "Det finns inget att konfigurera i denna insticksmodul"
+
+msgid "Save Plugin"
+msgstr "Spara insticksmodul"
+
+msgid ""
+"Remember to publish your changes for this placeholder when you are done, by "
+"clicking the Publish Changes button at the top."
+msgstr "Kom ihåg att publicera dina ändringar för denna platshållare när du är klar, genom att klicka på knappen Publicera ändringar högst upp."
+
+msgid "Edit Placeholder"
+msgstr "Redigera platshållare"
+
+msgid ""
+"Edit plugins inside this placeholder. By saving the individual plugin, the "
+"changes are saved as a draft, and only you are able to see the changes. To "
+"make your changes Public, Click the Publish Changes button."
+msgstr "Redigera plugins i den här platshållaren. Genom att spara det enskilda plugin, ändringarna sparas som ett utkast och endast du kan se ändringarna. För att göra dina ändringar offentliga, klicka på knappen Publicera ändringar."
+
+msgid "Add new cell"
+msgstr "Lägg till ny cell"
+
+msgid "Delete row"
+msgstr "Radera rad"
+
+msgid "Move row"
+msgstr "Flytta rad"
+
+msgid "Add new row"
+msgstr "Lägg till ny rad"
+
+msgid "Admin Theme Configuration"
+msgstr ""
+
+msgid "Change Theme"
+msgstr ""
+
+msgid "Shop Theme Configuration"
+msgstr ""
+
+msgid "No themes are installed."
+msgstr "Inga teman är installerat."
+
+#, python-format
+msgid "Theme Configuration: %(name)s"
+msgstr "Temat inställningar: %(name)s"
+
+msgid "Theme Configuration"
+msgstr "Temats inställningar"
+
+msgid "There's nothing to configure in this theme."
+msgstr "Det finns inget att konfigurera i detta tema."
+
+msgid "Select theme"
+msgstr "Välj tema"
+
+msgid "Theme Guide"
+msgstr "Temaguide"
+
+msgid "Theme screenshot"
+msgstr ""
+
+msgid "Author"
+msgstr "Skapare"
+
+msgid "Configure"
+msgstr "Konfigurera"
+
+msgid "Activate"
+msgstr "Aktivera"
+
+msgid "Admin Theme"
+msgstr ""
+
+msgid "Edit Admin Theme"
+msgstr ""
+
+msgid "Theme Name"
+msgstr "Temats namn"
+
+msgid "Actions"
+msgstr "Åtgärder"
+
+msgid "Currently active"
+msgstr "Aktiv just nu"
+
+msgid "Revert Changes"
+msgstr "Återställ ändringar"
+
+msgid "Publish Changes"
+msgstr "Publicera ändringar"
+
+msgid "No access to editing."
+msgstr "Ingen åtkomst till redigering."
+
+#, python-format
+msgid "Unknown command: `%s`."
+msgstr "Okänt kommando: `%s`."
+
+msgid "Unable to determine the current theme."
+msgstr "Det går inte att bestämma det aktuella temat."
+
+#, python-format
+msgid "Can't add more than %d cells in one row."
+msgstr "Kan inte lägga till mer än %d celler i en rad."
+
+msgid "Published"
+msgstr "Publicerad"
+
+msgid "Reverted"
+msgstr "Tillbakarullad"
+
+msgid "Custom"
+msgstr ""
+
+msgid "Full Width"
+msgstr "Fullbredd"
+
+msgid "Three Fourths (3/4)"
+msgstr "Tre fjärdedelar (3/4)"
+
+msgid "Two Thirds (2/3)"
+msgstr "Två tredjedelar (2/3)"
+
+msgid "Half (1/2)"
+msgstr "Hälften (1/2)"
+
+msgid "One Third (1/3)"
+msgstr "En tredjedel (1/3)"
+
+msgid "One Fourth (1/4)"
+msgstr "En fjärdedel (1/4)"
+
+msgid "Auto"
+msgstr "Automatisk"
+
+msgid "Cell width"
+msgstr "Cellbredd"
+
+msgid "Cell align"
+msgstr "Celljustering"
+
+msgid "Extra classes"
+msgstr "Extra klasser"
+
+msgid "Add extra CSS classes names to the cell"
+msgstr "Lägg till extra CSS-klassnamn i cellen"
+
+msgid "No Plugin"
+msgstr "Ingen insticksmodul"

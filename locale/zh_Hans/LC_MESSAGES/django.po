@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Shuup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 15:24+0000\n"
-"PO-Revision-Date: 2021-07-14 20:24+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2021-08-03 16:47+0000\n"
+"PO-Revision-Date: 2021-08-03 19:14+0000\n"
+"Last-Translator: Christian Hess\n"
 "Language-Team: Chinese (Mandarin) (http://www.transifex.com/shuup/shuup/language/cmn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,1345 +19,639 @@ msgstr ""
 "Generated-By: Babel 2.1.1\n"
 "Language: cmn\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.8\n"
 
-msgid "Abandoned Cart Value"
-msgstr "已放弃购物车价值"
-
-#, python-brace-format
-msgid "Based on {b} carts over the last {d} days"
-msgstr "基于{b}过去{d}天的购物车"
-
-msgid "Carts"
-msgstr "购物车"
-
-msgid "Show carts"
-msgstr "显示购物车"
-
-msgid "Cart Inactivity Delay (hours)"
+msgid "Theme identifiers must match."
 msgstr ""
 
-msgid ""
-"Set the number of hours the cart must be inactive before it's displayed in "
-"Orders > Carts"
+msgid "Either theme_settings or shop should be informed."
 msgstr ""
 
-msgid "Key"
+msgid "Global plugins"
+msgstr "全局插件"
+
+msgid "Theme plugins"
+msgstr "主题插件"
+
+msgid "Shuup Extensible Theme Engine"
+msgstr "Shuup可扩展主题引擎"
+
+msgid "Themes"
+msgstr "主题"
+
+msgid "Customize the look and feel of your shop"
+msgstr "定制您商店的外观和感觉"
+
+msgid "Customize theme"
+msgstr "自定义主题"
+
+msgid "No theme is active. Click here to activate one."
+msgstr "没有有效的主题。点击这里激活。"
+
+msgid "Theming"
+msgstr "主题"
+
+msgid "Shuup Extensible Theme Engine Fonts"
 msgstr ""
 
-msgid "Last updated on"
-msgstr "最后更新"
-
-msgid "Completed"
+msgid "Fonts"
 msgstr ""
 
-msgid "yes"
-msgstr "是"
-
-msgid "no"
-msgstr "不是"
-
-msgid "Shop"
-msgstr "商店"
-
-msgid "Supplier"
+msgid "Allow the user to select fonts in admin."
 msgstr ""
 
-msgid "Customer"
-msgstr "顾客"
+msgid "Shuup Extensible Theme Engine Snippets"
+msgstr "Shuup可扩展主题引擎片段"
 
-msgid "Product count"
-msgstr "产品数量"
+msgid "Snippets"
+msgstr "片段"
 
-msgid "Total"
-msgstr "总共"
-
-msgid "Created on"
-msgstr "创建"
-
-msgid "Ordered"
-msgstr "已订购"
-
-msgid "Require shipping method"
-msgstr "要求配送方式"
-
-msgid "Whether to require the shipping method in checkout phases."
-msgstr "是否在结帐阶段要求发货方法。"
-
-msgid "Require payment method"
-msgstr "要求支付方式"
-
-msgid "Whether to require the payment method in checkout phases."
-msgstr "是否要求付款方法在结帐阶段。"
-
-msgid "Registration Settings"
-msgstr "注册设置"
-
-msgid "Allow company registration"
-msgstr "允许公司注册"
-
-msgid "If you select this, companies can register into your store."
-msgstr "如果您选择此选项，公司可以在您的商店注册。"
-
-msgid "Company registration requires approval"
-msgstr "公司注册须经批准"
+msgid "Theme Custom CSS/JS"
+msgstr "主题自定义CSS/JS"
 
 msgid ""
-"Registered companies must be manually approved by admin if this is checked. "
-"This option has no effect if company registration is not allowed on your "
-"site."
-msgstr "注册公司必须由管理员手动批准，如果这是检查。如果您的网站上不允许公司注册，则此选项无效。"
+"Select the themes that will have this snippet injected. Leave the field "
+"blank to inject in all themes."
+msgstr "选择将注入此片段的主题。将字段保留为空白，以插入所有主题。"
 
-msgid "Company tax number validation"
-msgstr "公司税号验证"
+msgid "Select the location of the page to inject the snippet."
+msgstr "选择要注入片段的页面位置。"
 
-msgid "Company tax number format is validated for European countries."
-msgstr "对欧洲国家的公司税号格式进行了验证。"
-
-msgid "Override shop's default configuration"
-msgstr "覆盖商店的默认配置"
-
-msgid ""
-"If checked, this configuration will be used instead of the shop's default "
-"configuration."
-msgstr "如果选中此配置，将使用此配置而不是商店的默认配置。"
-
-msgid "Available languages in storefront"
-msgstr "店面可用的语言"
-
-msgid ""
-"Select all the languages that should be available in storefront. Blank means"
-" that all languages should be available."
-msgstr "选择店面上应该提供的所有语言。空白意味着所有语言都应该可用。"
-
-msgid "Try to remove some products from the basket and order them separately."
-msgstr "请尝试清除购物篮里的一些产品，接着单独订购这些产品。"
-
-#, python-format
-msgid "Products in basket can't be shipped together. %s"
+msgid "Name"
 msgstr ""
 
-#, python-format
-msgid "Products in basket have no common payment method. %s"
-msgstr "购物篮中的产品没有通用的支付方式。%s"
-
-msgid "Tax number is required with the company name."
-msgstr "税号必须有公司名称"
-
-msgid "Company name is required with the tax number."
-msgstr "公司名称必须有税号"
-
-msgid "Use a saved address"
-msgstr "使用保存的地址"
-
-msgid "Addresses"
-msgstr "地址"
-
-msgid "Saved addresses."
+msgid "Filter by name..."
 msgstr ""
 
-msgid "Checkout as Guest"
-msgstr "结账为访客"
+msgid "Location"
+msgstr "位置"
 
-msgid "Register"
-msgstr "注册"
+msgid "Filter by location..."
+msgstr "按位置过滤..."
 
-msgid "Register with us for future convenience"
-msgstr "为了将来的方便，请向我们登记。"
+msgid "Type"
+msgstr "类型"
 
-msgid "Checkout Method Choice"
-msgstr "结帐方式选择"
+msgid "activate"
+msgstr "激活"
 
-msgid "I accept the terms and conditions"
-msgstr "我接受条款和条件"
+msgid "Theme"
+msgstr "主题"
 
-msgid "I want to receive marketing material"
-msgstr "我想收到营销材料"
+msgid "Choose a theme for your shop"
+msgstr "为你的商店选择一个主题"
 
-msgid "Comment"
-msgstr "评论"
+msgid "Theme activated."
+msgstr "主题已激活。"
 
-msgid ""
-"There has been a change in product availability. Please review your cart and"
-" reconfirm your order."
-msgstr "产品的可用性发生了变化。请检查您的购物车，并再次确认您的订单。"
+msgid "Custom CSS/JS"
+msgstr "自定义CSS / JS"
 
-msgid "Confirmation"
-msgstr "确认"
-
-msgid "Starting to create order."
+msgid "Woff"
 msgstr ""
 
-msgid "Empty Basket"
-msgstr "购物篮为空"
-
-msgid "shipping method"
-msgstr "配送方式"
-
-msgid "payment method"
-msgstr "支付方式"
-
-msgid "Shipping & Payment"
-msgstr "配送 & 支付"
-
-msgid "Saved services."
+msgid "Woff2"
 msgstr ""
 
-msgid "Sort products by name"
-msgstr "按名称分类产品"
-
-msgid "Ordering for sort by name"
-msgstr "按名称排序"
-
-msgid "Sort"
-msgstr "排列"
-
-msgid "Name - A-Z"
-msgstr "名称 - A-Z"
-
-msgid "Name - Z-A"
-msgstr "名称- Z-A"
-
-msgid "Enable this to allow products to be sortable by product name."
+msgid "TTF"
 msgstr ""
 
-msgid ""
-"Use a numeric value to set the order in which the the filter will appear on "
-"the product listing page."
-msgstr "使用数字值设置筛选器将在产品列表页上显示的顺序。"
-
-msgid "Sort products by price"
-msgstr "按价格分类产品"
-
-msgid "Ordering for sort by price"
-msgstr "按价格排序"
-
-msgid "Price - Low to High"
-msgstr "价格 - 由低到高"
-
-msgid "Price - High to Low"
-msgstr "价格 - 由高到低"
-
-msgid ""
-"Enable this to allow products to be sortable by price (from low to high; "
-"from high to low)."
+msgid "SVG"
 msgstr ""
 
-msgid "Sort products by date created"
-msgstr "按创建日期对产品进行排序"
-
-msgid "Ordering for sort by date created"
-msgstr "按日期排序"
-
-msgid "Date created"
-msgstr "创建日期"
-
-msgid ""
-"Enable this to allow products to be sortable from newest to oldest products."
+msgid "EOT"
 msgstr ""
 
-msgid ""
-"Use a numeric value to set the order in which the filter will appear on the "
-"product listing page."
-msgstr "使用数字值设置筛选器将在产品列表页上显示的顺序。"
+msgid "Stylesheets"
+msgstr "样式表"
 
-msgid "Sort products by date created - oldest first"
-msgstr "按创建日期对产品进行排序-最早的"
+msgid "The fonts, colors, and styles to use with your theme."
+msgstr "与主题一起使用的字体、颜色和样式。"
 
-msgid "Ordering for sort by date created - oldest first"
-msgstr "按日期排序-最早的"
-
-msgid "Date created - oldest first"
-msgstr "创建日期-最早的"
-
-msgid ""
-"Enable this to allow products to be sortable from oldest to newest products."
+msgid "Choose the primary color:"
 msgstr ""
 
-msgid "Filter products by manufacturer"
-msgstr "制造商过滤产品"
-
-msgid "Ordering for filter by manufacturer"
-msgstr "制造商订购过滤器"
-
-msgid "Manufacturers"
-msgstr "制造商"
-
-msgid ""
-"Enable this to allow products to be filterable by manufacturer for this "
-"category."
+msgid "Choose the secondary color:"
 msgstr ""
 
-msgid ""
-"Use a numeric value to set the order in which the manufacturer filters will "
-"appear on the product listing page."
-msgstr "使用数字值设置制造商筛选器将显示在“产品列表”页面上的顺序。"
-
-msgid "Filter products by category"
-msgstr "按类别过滤产品"
-
-msgid "Ordering for filter by category"
-msgstr "按类别排序筛选器"
-
-msgid "Categories"
-msgstr "分类"
-
-msgid ""
-"Enable this to allow products to be filterable by any visible product "
-"category. "
+msgid "Choose the primary text color:"
 msgstr ""
 
-msgid ""
-"Use a numeric value to set the order in which the category list filters will"
-" appear on the product listing page."
-msgstr "使用数字值设置类别列表筛选器将在“产品列表”页面上显示的顺序。"
-
-msgid "Limit page size"
-msgstr "限制页面大小"
-
-msgid "Ordering for limit page size"
-msgstr "订购限制页面大小"
-
-msgid "Products per page"
-msgstr "每页产品"
-
-msgid ""
-"Enable this to allow the customer to be able to select the number of "
-"products to display."
+msgid "Choose the success (green) style primary color:"
 msgstr ""
 
-msgid ""
-"Use a numeric value to set the order in which the page size filter will "
-"appear on the product listing page."
-msgstr "使用数字值设置页面大小筛选器将在产品列表页上显示的顺序。"
-
-msgid "Filter products by variation"
-msgstr "按变化过滤产品"
-
-msgid "Ordering for filter by variation"
-msgstr "按变化排序过滤"
-
-msgid ""
-"Enable this to allow products to be filterable by their different "
-"variations. For example, size or color."
+msgid "Choose the danger (red) style primary color:"
 msgstr ""
 
-msgid ""
-"Use a numeric value to set the order in which the variation filters will "
-"appear on the product listing page."
-msgstr "使用数字值设置变体筛选器将在产品列表页上显示的顺序。"
-
-msgid "Filter products by price"
-msgstr "按价格过滤产品"
-
-msgid "Ordering for filter by price"
-msgstr "按价格订购过滤器"
-
-msgid "Price"
-msgstr "价格"
-
-msgid ""
-"Enable this to allow products to be filtered by price. Prices will be listed"
-" in groups from the price range minimum to price range maximum in increments"
-" of the configured price range step."
+msgid "Admin Header Font"
 msgstr ""
 
-msgid ""
-"Use a numeric value to set the order in which the price range filters will "
-"appear on the product listing page."
-msgstr "使用数字值设置价格范围筛选器将显示在“产品列表”页面上的顺序。"
-
-msgid "Price range minimum"
-msgstr "价格区间最小值"
-
-msgid ""
-"Set the minimum price for the filter. The first range will be from zero to "
-"this value."
-msgstr "设置过滤器的最低价格。第一个范围将从零到此值。"
-
-msgid "Price range maximum"
-msgstr "价格区间最大值"
-
-msgid ""
-"Set the maximum price for the filter. The last range will include this value"
-" and above."
-msgstr "设置过滤器的最高价格。最后一个范围将包括此值及以上。"
-
-msgid "Price range step"
-msgstr "价格区间步骤"
-
-msgid ""
-"Set the price step for each range. Each range will increment by this value."
-msgstr "设置每个范围的价格步骤。每个范围将按此值递增。"
-
-msgid "Filter products by its attributes"
+msgid "Admin Body Font"
 msgstr ""
 
-msgid "Allow products to be filtered according to their attributes."
+msgid "Failed to render the plugin"
 msgstr ""
 
-msgid "Attributes that can be filtered"
-msgstr ""
-
-msgid "Select attributes that can used for filtering the products."
+msgid "Content in this box is shown to all user types without limitations."
 msgstr ""
 
 #, python-format
-msgid "Under %(min_limit)s"
-msgstr "低于%(min_limit)s"
+msgid ""
+"Content in this placeholder is shown for %(category_name)s category only."
+msgstr "此占位符中的内容仅显示在%(category_name)s的类别中。"
 
-#, python-format
-msgid "%(min)s to %(max)s"
-msgstr "%(min)s t到%(max)s"
+msgid "Content in this box is shown to guests (anonymous users) only."
+msgstr ""
 
-#, python-format
-msgid "%(max_limit)s & Above"
-msgstr "%(max_limit)s及以上"
-
-msgid "Filter products by supplier"
-msgstr "供应商过滤产品"
-
-msgid "Ordering for filter by supplier"
-msgstr "供应商订购过滤器"
-
-msgid "Suppliers"
-msgstr "供应商"
-
-msgid "Enable this to allow products to be filterable by supplier."
+msgid "Content in this box is shown to company contacts only."
 msgstr ""
 
 msgid ""
-"Use a numeric value to set the order in which the supplier filters will "
-"appear."
-msgstr "使用数字值设置供应商筛选器的出现顺序。"
-
-msgid "Allow multiselect suppliers"
+"Content in this box is shown to all logged-in contacts (both person and "
+"company; not anonymous)."
 msgstr ""
 
-msgid "Filter by multiple suppliers at a time."
+msgid "Content in this box is shown to person contacts only."
 msgstr ""
 
-msgid "Logged out since this account is inactive."
-msgstr "此帐户处于非活动状态时已注销。"
+#, python-format
+msgid "Content in this placeholder is shown for %(product_name)s only."
+msgstr "此占位符中的内容仅显示为%(product_name)s。"
 
-msgid "key"
-msgstr "键"
+msgid "Shop '{}' has no active theme"
+msgstr "商店“{}”没有活动主题"
 
-msgid "shop"
-msgstr "商店"
+msgid "Inline JavaScript"
+msgstr "内联JavaScript"
 
-msgid "supplier"
+msgid "Inline CSS"
+msgstr "内联CSS"
+
+msgid "Inline HTML"
+msgstr "内联 HTML"
+
+msgid "Inline Jinja HTML"
 msgstr ""
 
-msgid "customer"
-msgstr "顾客"
+msgid "current draft"
+msgstr "目前的草案"
 
-msgid "orderer"
-msgstr "订货人"
+msgid "old version"
+msgstr "旧版本"
 
-msgid "creator"
-msgstr "创建人"
+msgid "public"
+msgstr "公众"
+
+msgid "theme identifier"
+msgstr "主题标识符"
+
+msgid "view name"
+msgstr "浏览名称"
 
 msgid "created on"
 msgstr "创建"
 
-msgid "updated on"
-msgstr "更新"
+msgid "modified on"
+msgstr ""
 
-msgid "persistent"
-msgstr "持续存在"
+msgid "status"
+msgstr "状态"
 
-msgid "deleted"
-msgstr "已删除"
+msgid "internal data"
+msgstr "内部数据"
 
-msgid "finished"
-msgstr "完成"
-
-msgid "title"
-msgstr "名称"
+msgid "active"
+msgstr "活跃"
 
 msgid "data"
 msgstr "数据"
 
-msgid "taxless total price"
-msgstr "免税总价"
+#, python-format
+msgid "Theme configuration for %s"
+msgstr "%s 主题配置 "
 
-msgid "taxful total price"
-msgstr "税收总价"
-
-msgid "currency"
-msgstr "货币"
-
-msgid "prices include tax"
-msgstr "含税价"
-
-msgid "product_count"
-msgstr "产品计数"
-
-msgid "products"
-msgstr "产品"
-
-msgid "class spec"
+msgid "Shop"
 msgstr ""
 
-msgid "stored basket"
-msgstr "储存购物篮"
-
-msgid "stored baskets"
-msgstr "储存购物篮"
-
-msgid "ID"
+msgid "name"
 msgstr ""
 
-msgid "Reference Number"
+msgid "Font family name"
 msgstr ""
 
-msgid "Currency"
+msgid "Font Family CSS Property"
 msgstr ""
-
-msgid "Customer Name"
-msgstr ""
-
-msgid "Status"
-msgstr ""
-
-msgid "Shipping Method"
-msgstr ""
-
-msgid "Order Received"
-msgstr "订单已接收"
-
-msgid "Order"
-msgstr "订单"
-
-msgid "Customer Email"
-msgstr "顾客电子邮件"
-
-msgid "Customer Phone"
-msgstr "顾客电话"
-
-msgid "Shop Email"
-msgstr "商店邮件"
-
-msgid "Shop Phone"
-msgstr "商店电话"
-
-msgid "Language"
-msgstr "语言"
-
-msgid "Order Status Changed"
-msgstr ""
-
-msgid "Old Status"
-msgstr ""
-
-msgid "New Status"
-msgstr ""
-
-msgid "Shipment Created"
-msgstr "配送已创建"
-
-msgid "Shipment"
-msgstr "配送"
-
-msgid "Order Shipping Status"
-msgstr "订单配送状态"
-
-msgid "Shipment Status"
-msgstr "配送状态"
-
-msgid "Shipment Tracking Code"
-msgstr ""
-
-msgid "Shipment Tracking URL"
-msgstr ""
-
-msgid "Shipment Sent"
-msgstr ""
-
-msgid "Shipment Deleted"
-msgstr "配送已删除"
-
-msgid "Payment Created"
-msgstr "支付已创建"
-
-msgid "Order Payment Status"
-msgstr "订单支付状态"
-
-msgid "Payment"
-msgstr "支付"
-
-msgid "Refund Created"
-msgstr "创建退款"
 
 msgid ""
-"<p>Dear {{ order.customer }},</p>\n"
-"<p>A shipment has been created for your order and here are the details:</p>\n"
-"\n"
-"{% if shipment.tracking_code %}\n"
-"<p>Tracking code: {{ shipment.tracking_code }}</p>\n"
-"{% endif %}\n"
-"\n"
-"<p>Contents:</p>\n"
-"<table>\n"
-"    <thead>\n"
-"        <tr>\n"
-"            <th>Product</th>\n"
-"            <th>Quantity</th>\n"
-"        </tr>\n"
-"    </thead>\n"
-"    <tbody>\n"
-"{% for shipment_product in shipments.total_products %}\n"
-"        <tr>\n"
-"            <td>{{ shipment_product.product }}</td>\n"
-"            <td>{{ shipment_product.quantity }}</td>\n"
-"        </tr>\n"
-"{% endif %}\n"
-"    </tbody>\n"
-"</table>\n"
-msgstr "<p>亲爱的{{订单.顾客}}，已为您的订单创建了</p>\n <p>A货件，详情如下：</p>\n\n{％如装运.追踪代码％}\n<p>追踪代码{{如装运。追踪代码}}</p>\n{ ％特别处理％}\n\n<p>内容：</p>\n <table>\n <thead>\n <tr>\n <th>产品</th>\n <th>数量</th>\n </tr> \n</thead>\n <tbody>\n{% 用于装运的产品。总产品。％}\n<tr>\n <td>{{用于装运的产品。产品。}}</td>\n <td> {{用于装运的产品。数量。}}</td>\n </tr>\n{％特别处理％}\n</tbody> \n</table>\n"
-
-msgid "Send Shipment Created Email"
-msgstr "发送货件创建电子邮件"
-
-msgid "Send an email to customer when a shipment is created."
-msgstr "创建货件时，向客户发送电子邮件。"
-
-msgid ""
-"This script will send an email to customer when a shipment of his order has "
-"been created."
-msgstr "此脚本将发送电子邮件给客户时，他的订单已经创建。"
-
-msgid "{{ order.shop }} - Shipment created for order {{ order.identifier }}"
-msgstr "{{ 订单.商店}} -为{{订单.标识符}}订单创建的货件"
-
-msgid "Send Shipment Deleted Email"
-msgstr "发送装运已删除的电子邮件"
-
-msgid "Send email when a shipment is deleted."
-msgstr "当一批货物被删除时，请发送电子邮件。"
-
-msgid ""
-"This script will send an email to customer or to any configured email right "
-"after a shipment gets deleted."
-msgstr "此脚本将发送电子邮件给客户或任何配置的电子邮件后，一批货物被删除。"
-
-msgid "{{ order.shop }} - Shipment deleted for order {{ order.identifier }}"
-msgstr "{{订单.商店}} - 已为订单{{订单.标识符}}删除了货件"
-
-msgid "Send Payment Created Email"
-msgstr "发送付款创建的电子邮件"
-
-msgid "Send email to customer when a payment is created."
-msgstr "创建付款时，向客户发送电子邮件。"
-
-msgid ""
-"This script will send an email to customer or to any configured email right "
-"after a payment gets created."
-msgstr "此脚本将发送电子邮件给客户或任何配置的电子邮件后，付款被创建。"
-
-msgid "{{ order.shop }} - Payment created for order {{ order.identifier }}"
-msgstr "{{订单.商店}} - 为订单{{订单.标识符}}创建的付款"
-
-msgid "Send Refund Created Email"
-msgstr "发送退款创建的电子邮件"
-
-msgid "Send email when a refund is created."
-msgstr "创建退款时发送电子邮件。"
-
-msgid ""
-"This script will send an email to customer or to any configured email right "
-"after a refund gets created."
-msgstr "此脚本将发送电子邮件给客户或任何配置的电子邮件后，退款被创建。"
-
-msgid "{{ order.shop }} - Refund created for order {{ order.identifier }}"
-msgstr "{{订单.商店}} - 为订单{{订单.标识符}}创建退款"
-
-msgid "Send Order Confirmation Email"
-msgstr "发送订单确认电子邮件"
-
-msgid "Send a confirmation email when the order is created."
-msgstr "在创建订单时发送确认电子邮件。"
-
-msgid ""
-"This script will send an email to customer or to any configured email right "
-"after an order is created. The order contents can be put on email body as "
-"well as other informations like shipping method and payment method."
-msgstr "此脚本将在创建订单后立即向客户或任何配置好的电子邮件发送电子邮件。定单内容可以放在电子邮件正文上，也可以放在其他信息上，如运输方式和付款方式。"
-
-msgid "Cart Inactivity Delay"
+"(Optional) Input css font family property directly. Ex: font-family: Roboto;"
 msgstr ""
 
-msgid "Checkout configuration"
-msgstr "结帐配置"
-
-msgid "Product list sorts and filters"
-msgstr "产品列表排序和筛选器"
-
-msgid "Vendor"
+msgid "WOFF Font"
 msgstr ""
 
-msgid "Created Date"
+msgid "WOFF2 Font"
 msgstr ""
 
-msgid "Updated Date"
+msgid "TTF font"
 msgstr ""
 
-msgid "Ordered by"
+msgid "SVG font"
 msgstr ""
 
-msgid "Email"
+msgid "EOT font"
 msgstr ""
 
-msgid "Phone"
+msgid "Font Family"
 msgstr ""
 
-msgid "Tax Number"
+msgid "Font Families"
 msgstr ""
 
-msgid "Customer Comment"
+msgid "primary color"
 msgstr ""
 
-msgid "Payment Method"
+msgid "secondary color"
 msgstr ""
 
-msgid "Total Price"
+msgid "text color"
 msgstr ""
 
-msgid "Address Information"
+msgid "success color"
 msgstr ""
 
-msgid "Billing address"
-msgstr "账单地址"
-
-msgid "No billing address defined."
+msgid "danger color"
 msgstr ""
 
-msgid "Shipping address"
-msgstr "收货地址"
-
-msgid "No shipping address defined."
-msgstr ""
-
-msgid "Lines"
-msgstr ""
-
-msgid "SKU"
-msgstr "SKU"
-
-msgid "Text"
-msgstr ""
-
-msgid "Taxless Unit Price"
-msgstr ""
-
-msgid "Quantity"
-msgstr "数量"
-
-msgid "Taxless Discount"
-msgstr ""
-
-msgid "Taxless Discount Percentage"
-msgstr ""
-
-msgid "Tax"
-msgstr "税收"
-
-msgid "Taxless Total"
-msgstr ""
-
-msgid "Total incl. Tax"
+msgid "base font size"
 msgstr ""
 
 #, python-format
-msgid "Supplied by %(supplier)s"
+msgid "Admin Theme configuration for %s"
 msgstr ""
 
-msgid "Discount"
+msgid "snippet name"
 msgstr ""
 
-msgid "Taxless"
+msgid "Untitled"
 msgstr ""
 
-msgid "Logs"
+msgid "location"
+msgstr "位置"
+
+msgid "snippet type"
+msgstr "片段类型"
+
+msgid "snippet"
+msgstr "片段"
+
+msgid "themes"
+msgstr "主题"
+
+msgid "Snippet"
+msgstr "片段"
+
+msgid "Plugin"
+msgstr "插件"
+
+msgid "Categories"
+msgstr "类别"
+
+msgid "Category Links"
+msgstr "类别链接"
+
+msgid "Title"
+msgstr "标题"
+
+msgid "Show all categories"
+msgstr "显示所有类别"
+
+msgid "All categories are shown, even if not selected"
+msgstr "即使未选中，也会显示所有类别。"
+
+msgid "Image"
+msgstr "图片"
+
+msgid "Image Link URL"
+msgstr "图片链接URL"
+
+msgid "Full width"
+msgstr "全宽"
+
+msgid "Set image to the full width of cell."
 msgstr ""
 
-msgid "Date"
+msgid "Width (px)"
+msgstr "宽度(px)"
+
+msgid "Leave blank for default width."
 msgstr ""
 
-msgid "Type"
-msgstr ""
+msgid "Height (px)"
+msgstr "高度(px)"
 
-msgid "Message"
-msgstr ""
+msgid "Newest"
+msgstr "新"
 
-msgid "Extra"
-msgstr ""
+msgid "Best Selling"
+msgstr "最佳销售"
 
-msgid "Storefront Languages"
-msgstr "店面语言"
+msgid "Random"
+msgstr "随机的"
 
-msgid "Shopping cart"
-msgstr "购物车"
+msgid "Product Highlights"
+msgstr "产品亮点"
 
-msgid "Your shopping cart is empty."
-msgstr "您的购物车为空。"
+msgid "Count"
+msgstr "总数"
 
-msgid "There were errors on following items"
-msgstr "下列项目有错误"
-
-msgid "You are unable to proceed to checkout!"
-msgstr "无法前进至结账！"
-
-msgid "Checkout"
-msgstr "结账"
-
-msgid "Error! Please reload the page or move to previous step."
-msgstr ""
-
-msgid "Log in"
-msgstr "登录"
-
-msgid "Forgot your password?"
-msgstr "忘记密码？"
-
-msgid "There are errors"
-msgstr "出错"
-
-msgid "Please wait..."
-msgstr "请稍等..."
-
-msgid "My Dashboard"
-msgstr "我的控制面板"
-
-msgid "Dashboard"
-msgstr "控制面板"
-
-msgid "Home"
-msgstr "主页"
-
-msgid "Bad Request"
-msgstr "错误请求"
-
-msgid "Unfortunately the server couldn't process your request."
-msgstr "抱歉，服务器无法处理您的请求。"
-
-msgid "Back to Homepage"
-msgstr "返回主页"
-
-msgid "Permission Denied"
-msgstr "许可被拒绝"
-
-msgid "Unfortunately you didn't have permission to display this page."
-msgstr "抱歉，您没有权限展示该页面。"
-
-msgid "Page Not Found"
-msgstr "无法找到页面"
-
-msgid "Unfortunately the page you were looking for does not exist."
-msgstr "抱歉，您所查找的页面不存在。"
-
-msgid "Go Back"
-msgstr "返回"
-
-msgid "Internal Server Error"
-msgstr "内部服务器错误"
+msgid "Only show in-stock and orderable items"
+msgstr "只显示库存和可订购物品"
 
 msgid ""
-"Unfortunately an internal server error occurred. Try refreshing the page or "
-"try again later."
-msgstr "抱歉，内部服务器出错。请刷新页面或者稍后再试。"
+"Warning: The final number of products can be lower than 'Count' as it will "
+"filter out unorderable products from a set of 'Count' products."
+msgstr "警告：产品的最终数量可能低于“计数”，因为它将从一组“计数”产品中筛选出无法订购的产品。"
 
-msgid "Welcome to Shuup!"
-msgstr "欢迎来到Shuup！"
+msgid "Product Cross Sells"
+msgstr "产品交叉销售"
 
-#, python-format
-msgid "Welcome to %(name)s!"
-msgstr "欢迎来到%(name)s！"
-
-msgid "your shop"
-msgstr "您的商店"
-
-msgid ""
-"You are seeing this page because there is no theme selected for the default "
-"frontend."
-msgstr "您看到该页面是因为前端默认模式里没有选中任何主题。"
-
-msgid "Log in to the administration interface"
-msgstr "登录进入管理界面"
-
-msgid "to choose a theme and set up your shop."
-msgstr "选择主题并建立您的商店。"
-
-msgid ""
-"The administration interface does not seem to be available. Use other means "
-"to choose a theme."
-msgstr "管理界面似乎不可用，请用其他方式选择主题。"
-
-msgid "Product added to cart"
-msgstr "已添加该产品至购物车"
-
-msgid "Adding the product to the basket failed."
+msgid "Show variation parents"
 msgstr ""
 
-msgid "Remove product from basket"
-msgstr "从购物篮中删除该产品"
-
-#, python-brace-format
-msgid "{prop}:"
+msgid "Render variation parents instead of the children."
 msgstr ""
 
-msgid ""
-"The following items are not currently available (or are not available in the"
-" desired quantity) and cannot be included in your order."
-msgstr "以下项目目前不可用(或无法按所需数量提供)，也不能包括在您的订单中。"
-
-msgid "Continue Shopping"
-msgstr "继续购物"
-
-msgid "Proceed to checkout"
-msgstr "去结账"
-
-msgid "Coupons applied"
-msgstr "优惠券适用"
-
-msgid "Do you have a coupon code? Enter it here. "
-msgstr ""
-
-msgid "Coupon Code"
-msgstr "优惠券代码"
-
-msgid "Submit Code"
-msgstr "提交代码"
-
-msgid "Save cart"
-msgstr "保存购物车"
-
-msgid "Cart Title"
-msgstr "购物车标题"
-
-msgid "Save"
-msgstr "保存"
-
-msgid "Back to Products"
-msgstr "返回产品"
-
-msgid "Error!"
-msgstr ""
-
-msgid "Invalid coupon code."
-msgstr "无效优惠券代码"
-
-msgid "Removing a coupon failed."
-msgstr ""
-
-msgid "Coupon is not available."
-msgstr "优惠券不可用"
-
-msgid "Adding a coupon failed."
-msgstr ""
-
-msgid "Success!"
-msgstr ""
-
-msgid "Cart saved."
-msgstr ""
-
-msgid "Filter Products"
-msgstr "过滤产品"
-
-msgid "Show Grid/List"
-msgstr "网格/列表显示"
-
-msgid "Grid/list view"
-msgstr "网格/列表视图"
-
-msgid "Continue"
-msgstr "继续"
-
-msgid "Ordering for a company?"
-msgstr "为公司订购？"
-
-msgid "Please fill out these fields if you are ordering for a company."
-msgstr "如果您是为公司订购，请填写这些字段。"
-
-msgid "Ship to my billing address"
-msgstr "发货至我的账单地址"
-
-msgid "Choose Shipping Method"
-msgstr "选择配送方式"
-
-msgid "Choose Payment Method"
-msgstr "选择支付方式"
-
-msgid "No method is available."
-msgstr "没有方法可用"
-
-msgid "Delivery"
-msgstr "邮寄"
-
-msgid "Delivery method"
-msgstr "邮寄方式"
-
-msgid "Billing"
-msgstr "账单"
-
-msgid "Payment method"
-msgstr "支付方式"
-
-msgid "Add comment"
-msgstr "添加评论"
-
-msgid "Other information"
-msgstr "其他信息"
-
-msgid "Place Order"
-msgstr "下订单"
-
-msgid "Previous"
-msgstr "上一页"
-
-msgid "Next"
-msgstr "下一页"
-
-#, python-format
-msgid "Items %(start_index)d to %(end_index)d of %(count)d total"
-msgstr ""
-
-msgid "Change visibility limit to"
-msgstr "将可见性限制更改为"
-
-msgid "show only visible products and categories"
-msgstr "只显示可见的产品和类别"
-
-msgid "show all products and categories"
-msgstr "显示所有产品和类别"
-
-msgid "Change customer to person contact mode"
-msgstr "更改客户与人员的联系方式"
-
-msgid "Change customer to company contact mode"
-msgstr "改变客户与公司的联系方式"
-
-msgid "Change customer mode to guest"
-msgstr "将客户模式更改为访客"
-
-msgid "Tools"
-msgstr "工具"
-
-msgid "Maintenance"
-msgstr "维护"
-
-msgid "Live"
-msgstr "生活"
-
-msgid "Customer mode"
-msgstr "顾客模式"
-
-msgid "GUEST"
-msgstr "访客"
-
-msgid "COMPANY CONTACT"
-msgstr "公司联络"
-
-msgid "PERSON CONTACT"
-msgstr "个人联络"
-
-msgid "Toggle navigation"
-msgstr "切换导航"
-
-#, python-brace-format
-msgid "Edit '{object_title}' in administration page"
-msgstr ""
-
-#, python-brace-format
-msgid "Edit {object_name} in Admin"
-msgstr ""
-
-msgid "Shop Administration"
-msgstr "商店管理员"
-
-msgid ""
-"There were errors on submitted form fields. Please check them and try again."
-msgstr "提交表格里的字段出错，请查看并重试。"
-
-#, python-format
-msgid "By <strong>%(supplier_name)s</strong>"
-msgstr ""
-
-#, python-brace-format
-msgid "Available until: <span class=\"availability-date\">{date}</span></small>"
-msgstr ""
-
-msgid "Edit account details"
-msgstr "账号详情编辑"
-
-msgid "Edit company details"
-msgstr "编辑公司详情"
-
-msgid "My orders"
-msgstr "我的订单"
-
-msgid "My saved carts"
-msgstr "我的已保存购物车"
-
-msgid "My wishlists"
-msgstr "我的愿望清单"
-
-msgid "Admin panel"
-msgstr "管理面板"
-
-msgid "Log out"
-msgstr "退出"
-
-msgid "New user? Register here!"
-msgstr "新用户？在此注册！"
-
-msgid "Cart"
-msgstr "购物车"
-
-msgid "Items"
-msgstr "物品"
-
-msgid "View cart"
-msgstr "查看购物车"
-
-msgid "Menu"
-msgstr "菜单"
+msgid "Category"
+msgstr "类别"
+
+msgid "Category Products Highlight"
+msgstr "类别产品突出显示"
 
 msgid "Products"
 msgstr "产品"
 
-msgid "Files"
-msgstr "文件"
+msgid "Select all products you want to show"
+msgstr "选择要显示的所有产品。"
 
-msgid "No method selected"
-msgstr "没有模式可选择"
+msgid "Product Selection"
+msgstr "产品选择"
 
-msgid "Product"
-msgstr "产品"
+msgid "Product Highlights (asynchronous)"
+msgstr ""
 
-msgid "Unit Price"
-msgstr "单价"
+msgid "Cutoff days"
+msgstr ""
 
-msgid "excl. tax"
-msgstr "不包税"
+msgid "Cache timeout (seconds)"
+msgstr ""
 
-msgid "Products ordered"
-msgstr "产品已订购"
+msgid "Product Cross Sells (asynchronous)"
+msgstr ""
 
-msgid "Tax breakdown"
-msgstr "税收明细"
+msgid "Category Products Highlight (asynchronous)"
+msgstr ""
 
-msgid "Tax percentage"
-msgstr "税率"
+msgid "Product Selection (asynchronous)"
+msgstr ""
 
-msgid "Based on amount"
-msgstr "根据数额"
+msgid "In-Place Snippet"
+msgstr "在广场上"
 
-msgid "Amount of tax"
-msgstr "税额"
+msgid "Resource snippet for start of head"
+msgstr ""
 
-msgid "Total including tax"
-msgstr "总含税"
+msgid "Resource snippet for end of head"
+msgstr "头末端的资源片段"
 
-msgid "Company"
-msgstr "公司"
+msgid "Resource snippet for beginning of body"
+msgstr "用于身体开头的资源片段"
 
-msgid "Tax number"
-msgstr "税号"
+msgid "Resource for end of body"
+msgstr "身体末端资源"
 
-msgid "Preview"
-msgstr "预览"
-
-msgid "Also available in"
-msgstr "也提供"
+msgid "URL"
+msgstr "URL"
 
 #, python-format
-msgid "Save %(discount_percent)s"
-msgstr "保存 %(discount_percent)s"
-
-msgid "Product Information"
-msgstr "产品信息"
-
-msgid "Includes these products"
-msgstr "包含这些产品"
-
-msgid "No product description available"
-msgstr "没有产品描述"
-
-msgid "Barcode"
-msgstr "条形码"
-
-msgid "Manufacturer"
-msgstr "制造商"
-
-msgid "Package Size"
-msgstr "页面大小"
-
-msgid "Available Until"
-msgstr "可供使用直到"
-
-msgid "Width"
-msgstr "宽度"
-
-msgid "Height"
-msgstr "高度"
-
-msgid "Depth"
-msgstr "深度"
-
-msgid "Net Weight"
-msgstr "净重"
-
-msgid "Gross Weight"
-msgstr "毛重"
-
-msgid "External link"
-msgstr "外部链接"
-
-msgid "Select"
-msgstr "选择"
-
-msgid "Select product"
-msgstr "选择产品"
-
-msgid "One-time purchase"
+msgid "%(name)s Ordering"
 msgstr ""
 
-msgid "Subscribe"
-msgstr ""
+msgid "Ordering"
+msgstr "订单"
 
-msgid "Select frequency"
-msgstr ""
+msgid "Social Media Links"
+msgstr "社交媒体链接"
 
-msgid "Add to cart"
-msgstr "添加到购物车"
+msgid "Topic"
+msgstr "主题"
 
-#, python-brace-format
-msgid "Available until: {date}"
-msgstr ""
+msgid "Icon Size"
+msgstr "图标大小"
 
-msgid "Maintenance mode"
-msgstr "维护模式"
+msgid "Default"
+msgstr "默认"
 
-msgid "Shop is currently down for maintenance."
-msgstr "商店目前在维修中。"
+msgid "Large"
+msgstr "大的"
 
-msgid "Thank you for your order!"
-msgstr "感谢您的订购！"
+msgid "Alignment"
+msgstr "对准"
+
+msgid "Left"
+msgstr "左"
+
+msgid "Center"
+msgstr "中心"
+
+msgid "Right"
+msgstr "右"
+
+msgid "text"
+msgstr "文本"
+
+#, python-format
+msgid "Click to edit placeholder: %s"
+msgstr "点击编辑占位符：%s"
 
 msgid ""
-"Your order has been received. You can see the details of your order below."
-msgstr "您的订单已接收。您可在下查看订单详情。"
+"This placeholder is global and content of this placeholder is shown on all "
+"pages."
+msgstr "此占位符是全局的，此占位符的内容显示在所有页面上。"
 
-msgid "User account activation"
-msgstr "用户账号激活"
+msgid "End of head"
+msgstr "头末端"
+
+msgid "Start of head"
+msgstr "头开始"
+
+msgid "End of body"
+msgstr "身体末端"
+
+msgid "Start of body"
+msgstr "身体开始"
+
+msgid "Content start"
+msgstr "内容启动"
+
+msgid "Content end"
+msgstr "内容结束"
+
+msgid "(Error while rendering.)"
+msgstr ""
+
+msgid "Delete This Cell"
+msgstr "删除该单元格"
+
+msgid "Untranslated"
+msgstr "未翻译"
+
+msgid "There's nothing to configure in this plugin."
+msgstr "该插件无法配置。"
+
+msgid "Save Plugin"
+msgstr "保存插件"
 
 msgid ""
-"If you want to be able to see your order history, please create a password "
-"for your account: "
-msgstr "如果您想查看您的订单历史纪录，请为您的账号创建密码："
+"Remember to publish your changes for this placeholder when you are done, by "
+"clicking the Publish Changes button at the top."
+msgstr "请记住，当您完成此占位符时，请单击顶部的“发布更改”按钮来发布对此占位符的更改。"
 
-msgid "Send"
-msgstr "发送"
-
-msgid "Payment canceled"
-msgstr "支付已取消"
-
-msgid "You have canceled payment"
-msgstr "您已经取消支付"
-
-msgid "Retry payment"
-msgstr "重试支付"
-
-msgid "Error"
-msgstr "错误"
-
-msgid "Combination not available"
-msgstr "无法合并"
-
-msgid "Open product page"
-msgstr "打开产品页"
-
-msgid "Hide prices"
-msgstr "隐藏价格"
-
-msgid "Set shop in catalog mode"
-msgstr "按目录模式设置商店"
-
-msgid "Show supplier info"
-msgstr "显示供应商信息"
+msgid "Edit Placeholder"
+msgstr "占位符编辑"
 
 msgid ""
-"Show supplier name in product-box, product-detail, basket- and order-lines"
-msgstr "在产品盒、产品详细信息、购物篮和订单线中显示供应商名称。"
+"Edit plugins inside this placeholder. By saving the individual plugin, the "
+"changes are saved as a draft, and only you are able to see the changes. To "
+"make your changes Public, Click the Publish Changes button."
+msgstr "在这个占位符中编辑插件。通过保存单个插件，更改将作为草稿保存，并且只有您能够看到更改。要使更改公开，请单击“发布更改”按钮。"
 
-msgid "Show Product Details"
-msgstr "显示产品细节"
+msgid "Add new cell"
+msgstr "添加新单元格"
 
-msgid ""
-"If you enable this, extra information will be shown on product page in "
-"frontend."
+msgid "Delete row"
+msgstr "删除行"
+
+msgid "Move row"
+msgstr "移动行"
+
+msgid "Add new row"
+msgstr "添加新行"
+
+msgid "Admin Theme Configuration"
 msgstr ""
 
-msgid "Show Variations as Buttons"
+msgid "Change Theme"
 msgstr ""
 
-msgid ""
-"If you enable this, the variations will be shown as buttons instead of "
-"dropdowns."
+msgid "Shop Theme Configuration"
 msgstr ""
 
-msgid "Product detail extra tab title"
-msgstr "产品详细信息附加标签标题"
+msgid "No themes are installed."
+msgstr "未安装主题。"
 
-msgid "Enter the title for the product detail extra tab."
-msgstr "输入产品详细信息附加选项卡的标题"
+#, python-format
+msgid "Theme Configuration: %(name)s"
+msgstr "主题配置 ：%(name)s"
 
-msgid "Product detail extra tab content"
-msgstr "产品详细信息附加选项卡内容"
+msgid "Theme Configuration"
+msgstr "主题配置 "
 
-msgid "Enter the content for the product detail extra tab."
-msgstr "输入“产品详细信息”附加选项卡的内容。"
+msgid "There's nothing to configure in this theme."
+msgstr "该主题无法配置。"
 
-msgid "Description"
-msgstr "描述"
+msgid "Select theme"
+msgstr "选择主题"
 
-msgid "Details"
-msgstr "详情"
+msgid "Theme Guide"
+msgstr "主题指南"
 
-msgid "Attributes"
-msgstr "属性"
-
-msgid "Product reviews"
-msgstr "产品评论"
-
-msgid "Product detail tabs"
-msgstr "产品详细标签"
-
-msgid "Select all tabs that should be rendered in product details."
+msgid "Theme screenshot"
 msgstr ""
 
-msgid "Tax number is not valid."
-msgstr "税号无效"
+msgid "Author"
+msgstr "作者"
 
-msgid "Edit"
-msgstr "编辑"
+msgid "Configure"
+msgstr "配置"
 
-#, python-brace-format
-msgid "`{language_code}` is an invalid language code."
+msgid "Activate"
+msgstr "激活"
+
+msgid "Admin Theme"
 msgstr ""
 
-msgid "The order is canceled so you can't pay for it."
+msgid "Edit Admin Theme"
 msgstr ""
 
-msgid "Error! This product is not available in this shop."
-msgstr ""
+msgid "Theme Name"
+msgstr "主题名称"
 
-msgid "Invalid timezone"
+msgid "Actions"
+msgstr "操作"
+
+msgid "Currently active"
+msgstr "目前活跃"
+
+msgid "Revert Changes"
+msgstr "还原改变"
+
+msgid "Publish Changes"
+msgstr "发布更改"
+
+msgid "No access to editing."
 msgstr ""
 
 #, python-format
-msgid "Maximum file size reached (%(size)s MB)."
+msgid "Unknown command: `%s`."
 msgstr ""
+
+msgid "Unable to determine the current theme."
+msgstr ""
+
+#, python-format
+msgid "Can't add more than %d cells in one row."
+msgstr ""
+
+msgid "Published"
+msgstr "发行"
+
+msgid "Reverted"
+msgstr "回复"
+
+msgid "Custom"
+msgstr ""
+
+msgid "Full Width"
+msgstr "最大化"
+
+msgid "Three Fourths (3/4)"
+msgstr "四分之三 (3/4)"
+
+msgid "Two Thirds (2/3)"
+msgstr "三分之二 (2/3)"
+
+msgid "Half (1/2)"
+msgstr "一半 (1/2)"
+
+msgid "One Third (1/3)"
+msgstr "三分之一(1/3)"
+
+msgid "One Fourth (1/4)"
+msgstr "四分之一(1/4)"
+
+msgid "Auto"
+msgstr "自动"
+
+msgid "Cell width"
+msgstr "单元格宽度"
+
+msgid "Cell align"
+msgstr "单元对齐"
+
+msgid "Extra classes"
+msgstr "额外课程"
+
+msgid "Add extra CSS classes names to the cell"
+msgstr "向单元格中添加额外的css类名称。"
+
+msgid "No Plugin"
+msgstr "没有插件"
