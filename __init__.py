@@ -5,72 +5,53 @@
 #
 # This source code is licensed under the OSL-3.0 license found in the
 # LICENSE file in the root directory of this source tree.
+import django.conf
+
 from shuup.apps import AppConfig
-from shuup.apps.settings import validate_templates_configuration
+from shuup.core.excs import MissingSettingException
+from shuup.utils import money
 
 
-class ShuupFrontAppConfig(AppConfig):
-    name = "shuup.front"
-    verbose_name = "Shuup Frontend"
-    label = "shuup_front"
-
+class ShuupCoreAppConfig(AppConfig):
+    name = "shuup.core"
+    verbose_name = "Shuup Core"
+    label = "shuup"  # Use "shuup" as app_label instead of "core"
+    required_installed_apps = (
+        "django.contrib.auth",
+        "django.contrib.contenttypes",
+        "easy_thumbnails",
+        "filer",
+    )
     provides = {
-        "admin_category_form_part": [
-            "shuup.front.admin_module.sorts_and_filters.form_parts.ConfigurationCategoryFormPart"
+        "pricing_module": ["shuup.core.pricing.default_pricing:DefaultPricingModule"],
+        "order_source_validator": [
+            "shuup.core.order_creator:OrderSourceMinTotalValidator",
+            "shuup.core.order_creator:OrderSourceMethodsUnavailabilityReasonsValidator",
+            "shuup.core.order_creator:OrderSourceSupplierValidator",
         ],
-        "admin_module": [
-            "shuup.front.admin_module.CartAdminModule",
-        ],
-        "admin_shop_form_part": [
-            "shuup.front.admin_module.sorts_and_filters.form_parts.ConfigurationShopFormPart",
-            "shuup.front.admin_module.checkout.form_parts.CheckoutShopFormPart",
-            "shuup.front.admin_module.companies.form_parts.RegistrationSettingsFormPart",
-            "shuup.front.admin_module.translation.form_parts.TranslationSettingsFormPart",
-            "shuup.front.admin_module.carts.form_parts.CartDelayFormPart",
-        ],
-        "notify_event": [
-            "shuup.front.notify_events:OrderReceived",
-            "shuup.front.notify_events:OrderStatusChanged",
-            "shuup.front.notify_events:ShipmentCreated",
-            "shuup.front.notify_events:ShipmentDeleted",
-            "shuup.front.notify_events:ShipmentSent",
-            "shuup.front.notify_events:PaymentCreated",
-            "shuup.front.notify_events:RefundCreated",
-        ],
-        "notify_script_template": [
-            "shuup.front.notify_script_templates:PaymentCreatedEmailScriptTemplate",
-            "shuup.front.notify_script_templates:RefundCreatedEmailScriptTemplate",
-            "shuup.front.notify_script_templates:ShipmentDeletedEmailScriptTemplate",
-            "shuup.front.notify_script_templates:OrderConfirmationEmailScriptTemplate",
-            "shuup.front.notify_script_templates:ShipmentCreatedEmailScriptTemplate",
-        ],
-        "front_extend_product_list_form": [
-            "shuup.front.forms.product_list_modifiers.CategoryProductListFilter",
-            "shuup.front.forms.product_list_modifiers.LimitProductListPageSize",
-            "shuup.front.forms.product_list_modifiers.ProductPriceFilter",
-            "shuup.front.forms.product_list_modifiers.ProductVariationFilter",
-            "shuup.front.forms.product_list_modifiers.SortProductListByCreatedDate",
-            "shuup.front.forms.product_list_modifiers.SortProductListByAscendingCreatedDate",
-            "shuup.front.forms.product_list_modifiers.SortProductListByName",
-            "shuup.front.forms.product_list_modifiers.SortProductListByPrice",
-            "shuup.front.forms.product_list_modifiers.ManufacturerProductListFilter",
-            "shuup.front.forms.product_list_modifiers.AttributeProductListFilter",
-            "shuup.front.forms.product_list_supplier_modifier.SupplierProductListFilter",
-        ],
-        "front_product_order_form": [
-            "shuup.front.forms.order_forms:VariableVariationProductOrderForm",
-            "shuup.front.forms.order_forms:SimpleVariationProductOrderForm",
-            "shuup.front.forms.order_forms:SimpleProductOrderForm",
-        ],
-        "front_model_url_resolver": ["shuup.front.utils.urls.model_url"],
+        "product_kind_specs": ["shuup.core.specs.product_kind:DefaultProductKindSpec"],
     }
 
     def ready(self):
+        from django.conf import settings
+
+        if not getattr(settings, "PARLER_DEFAULT_LANGUAGE_CODE", None):
+            raise MissingSettingException("PARLER_DEFAULT_LANGUAGE_CODE must be set.")
+        if not getattr(settings, "PARLER_LANGUAGES", None):
+            raise MissingSettingException("PARLER_LANGUAGES must be set.")
+
+        # set money precision provider function
+        from .models import get_currency_precision
+
+        money.set_precision_provider(get_currency_precision)
+
+        if django.conf.settings.SHUUP_ERROR_PAGE_HANDLERS_SPEC:
+            from .error_handling import install_error_handlers
+
+            install_error_handlers()
+
         # connect signals
-        import shuup.front.notify_events  # noqa: F401
-        import shuup.front.signal_handlers  # noqa: F401
-
-        validate_templates_configuration()
+        import shuup.core.signal_handlers  # noqa: F401
 
 
-default_app_config = "shuup.front.ShuupFrontAppConfig"
+default_app_config = "shuup.core.ShuupCoreAppConfig"
