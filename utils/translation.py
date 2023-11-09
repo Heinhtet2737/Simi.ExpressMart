@@ -5,57 +5,54 @@
 #
 # This source code is licensed under the OSL-3.0 license found in the
 # LICENSE file in the root directory of this source tree.
-from django.conf import settings
-from django.utils.translation import get_language_info, ugettext, ugettext_lazy as _
-
-from shuup import configuration
-
-FRONT_AVAILABLE_LANGUAGES_CONFIG_KEY = "front:available_languages"
+from shuup.utils.iterables import batch
 
 
-def get_language_choices(shop=None):
+def cache_translations(objects, languages=None, meta=None):
     """
-    Returns a list of the available language choices, e.g.:
-        [("en", "English", "English"])
+    Cache translation objects in given languages to the objects in one fell swoop.
+    This will iterate a queryset, if one is passed!
 
-    If a shop is passed, the languages will be filtered by those
-    enabled for that shop.
-
-    :rtype iterable[(str, str, str)]
+    :param objects: List or queryset of Translatable models
+    :param languages: Iterable of languages to fetch. In addition, all "_current_language"s will be fetched
+    :return: objects
     """
-    available_languages = []
-    languages = []
+    if not objects:
+        return objects
+    languages = set(languages or ())
+    if meta is None:
+        meta = objects[0]._parler_meta.root  # work on base model by default
+    xlate_model = meta.model
 
-    if shop:
-        available_languages = configuration.get(shop, FRONT_AVAILABLE_LANGUAGES_CONFIG_KEY)
-        if available_languages:
-            available_languages = available_languages.split(",")
+    object_map = dict((object.pk, object) for object in objects)
+    languages.update(set(object._current_language for object in objects))
+    master_ids = object_map.keys()
 
-    for code, name in settings.LANGUAGES:
-        if available_languages and code not in available_languages:
-            continue
-
-        lang_info = get_language_info(code)
-        name_in_current_lang = ugettext(name)
-        local_name = lang_info["name_local"]
-        languages.append((code, name_in_current_lang, local_name))
-    return languages
-
-
-def set_shop_available_languages(shop, languages):
-    available_codes = [code for code, name in settings.LANGUAGES]
-
-    # validate languages
-    for language in languages:
-        if language not in available_codes:
-            msg = _("`{language_code}` is an invalid language code.").format(language_code=language)
-            raise ValueError(msg)
-
-    configuration.set(shop, FRONT_AVAILABLE_LANGUAGES_CONFIG_KEY, ",".join(languages))
+    # SQLite limits host variables to 999 (see http://www.sqlite.org/limits.html#max_variable_number),
+    # so we're batching to a number around that, with enough leeway for other binds (`languages` in particular).
+    for master_ids in batch(master_ids, 950):
+        for translation in xlate_model.objects.filter(master_id__in=master_ids, language_code__in=languages):
+            master = object_map[translation.master_id]
+            master._translations_cache[xlate_model][translation.language_code] = translation
+            # FIXME: setattr(translation, translation.__class__.master.cache_name, master)
+    return objects
 
 
-def get_shop_available_languages(shop):
-    available_languages = configuration.get(shop, FRONT_AVAILABLE_LANGUAGES_CONFIG_KEY, "")
-    if available_languages:
-        return available_languages.split(",")
-    return []
+def cache_translations_for_tree(root_objects, languages=None):
+    """
+    Cache translation objects in given languages, iterating MPTT trees.
+
+    :param root_objects: List of MPTT models
+    :type root_objects: Iterable[model]
+    :param languages: List of languages
+    :type languages: Iterable[str]
+    """
+    all_objects = {}
+
+    def walk(object_list):
+        for object in object_list:
+            all_objects[object.pk] = object
+            walk(object.get_children())
+
+    walk(root_objects)
+    cache_translations(list(all_objects.values()), languages=languages)

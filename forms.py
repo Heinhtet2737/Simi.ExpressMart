@@ -5,95 +5,144 @@
 #
 # This source code is licensed under the OSL-3.0 license found in the
 # LICENSE file in the root directory of this source tree.
-from __future__ import unicode_literals
+import warnings
+from copy import deepcopy
+from django import forms
+from django.forms.widgets import TextInput
+from django.urls.base import reverse_lazy
+from django.utils.translation import ugettext_lazy as _
 
-import six
-from django.contrib import messages
-from django.core.exceptions import NON_FIELD_ERRORS
-from django.forms.utils import flatatt
+from shuup.admin.forms.fields import ObjectSelect2ModelField
+from shuup.admin.forms.quick_select import QuickAddRelatedObjectSelect
+from shuup.admin.forms.widgets import FileDnDUploaderWidget
+from shuup.admin.shop_provider import get_shop
+from shuup.utils.deprecation import RemovedInFutureShuupWarning
+from shuup.xtheme.models import Font, ThemeSettings
+
+from .models import AdminThemeSettings
 
 
-def filter_form_field_choices(field, predicate, invert=False):
+class GenericThemeForm(forms.ModelForm):
     """
-    Filter choices of a form field and its widget by predicate.
-
-    The predicate may be a callable of the signature ``(pair) -> bool``
-    or an iterable of allowable values.
-
-    :param field: Form field.
-    :type field: django.forms.Field
-    :param predicate: Predicate.
-    :type predicate: function|Iterable
-    :param invert: Invert the semantics of the predicate, i.e. items matching it will be rejected.
-    :type invert: bool
-    :return: Nothing. The field is modified in-place.
+    A generic form for Xthemes; populates itself based on `fields` in the theme class.
     """
 
-    if not callable(predicate):
-        allowed_values = set(predicate)
+    class Meta:
+        model = ThemeSettings
+        fields = ()  # Nothing -- we'll populate this ourselves, thank you very much
 
-        def predicate(pair):
-            return pair[0] in allowed_values
+    def __init__(self, **kwargs):
+        self.theme = kwargs.pop("theme")
+        super(GenericThemeForm, self).__init__(**kwargs)
+        if self.theme.stylesheets:
+            if isinstance(self.theme.stylesheets[0], dict):
+                choices = [(style["stylesheet"], style["name"]) for style in self.theme.stylesheets]
+            else:
+                warnings.warn(
+                    "Warning! Using list of tuples in `theme.stylesheets` will deprecate "
+                    "in Shuup 0.5.7. Use list of dictionaries instead.",
+                    RemovedInFutureShuupWarning,
+                )
+                choices = self.theme.stylesheets
+            self.fields["stylesheet"] = forms.ChoiceField(
+                label=_("Stylesheets"),
+                choices=choices,
+                initial=choices[0],
+                required=True,
+                help_text=_("The fonts, colors, and styles to use with your theme."),
+            )
 
-    if invert:
-        choices = [pair for pair in field.choices if not predicate(pair)]
-    else:
-        choices = [pair for pair in field.choices if predicate(pair)]
+        fields = self.theme.fields
+        if hasattr(fields, "items"):  # Quacks like a dict; that's fine too
+            fields = fields.items()
+        for name, field in fields:
+            self.fields[name] = deepcopy(field)
 
-    field.choices = field.widget.choices = choices
+        self.initial.update(self.instance.get_settings())
+
+    def save(self, commit=True):
+        """
+        Save theme settings into the ThemeSettings instance.
+
+        :param commit: Commit flag. Default is True and will raise a ValueError if it is defined in any way.
+                        This field is here only to ensure the compatibility with the superclass.
+        :type commit: bool
+        :return: The now saved `ThemeSettings` instance
+        :rtype: shuup.xtheme.models.ThemeSettings
+        """
+        if not commit:
+            raise ValueError(
+                "Error! This form does not support `commit=False` or any other value. "
+                "This field is here only to ensure the compatibility with the superclass."
+            )
+        self.instance.update_settings(self.cleaned_data)
+        return self.instance
 
 
-def add_form_errors_as_messages(request, form):
-    """
-    Add the form's errors, if any, into the request as messages.
+class FontForm(forms.ModelForm):
+    class Meta:
+        model = Font
+        fields = "__all__"
 
-    :param request: Request to messagify.
-    :type request: django.http.HttpRequest
-    :param form: The errorful form.
-    :type form: django.forms.Form
-    :return: Number of messages added. May be thousands, for a very unlucky form.
-    :rtype: int
-    """
-    n_messages = 0
-    for field_name, errors in form.errors.items():
-        if field_name != NON_FIELD_ERRORS:
-            field_label = form[field_name].label
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop("request")
+        super(FontForm, self).__init__(*args, **kwargs)
+        self.fields["woff"].widget = FileDnDUploaderWidget(upload_path="/admin_typography/", clearable=True)
+        self.fields["woff2"].widget = FileDnDUploaderWidget(upload_path="/admin_typography/", clearable=True)
+        self.fields["ttf"].widget = FileDnDUploaderWidget(upload_path="/admin_typography/", clearable=True)
+        self.fields["svg"].widget = FileDnDUploaderWidget(upload_path="/admin_typography/", clearable=True)
+        self.fields["eot"].widget = FileDnDUploaderWidget(upload_path="/admin_typography/", clearable=True)
+
+    def save(self, commit=True):
+        self.instance.shop = get_shop(self.request)
+        return super(FontForm, self).save(commit)
+
+
+class QuickAddFontSelect(QuickAddRelatedObjectSelect):
+    url = reverse_lazy("shuup_admin:xtheme.font.new")
+    model = "xtheme.Font"
+
+
+class AdminThemeForm(forms.ModelForm):
+    class Meta:
+        model = AdminThemeSettings
+        fields = "__all__"
+        labels = {
+            "primary_color": _("Choose the primary color:"),
+            "secondary_color": _("Choose the secondary color:"),
+            "text_color": _("Choose the primary text color:"),
+            "success_color": _("Choose the success (green) style primary color:"),
+            "danger_color": _("Choose the danger (red) style primary color:"),
+        }
+        widgets = {
+            "primary_color": TextInput(attrs={"type": "color"}),
+            "secondary_color": TextInput(attrs={"type": "color"}),
+            "text_color": TextInput(attrs={"type": "color"}),
+            "success_color": TextInput(attrs={"type": "color"}),
+            "danger_color": TextInput(attrs={"type": "color"}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(AdminThemeForm, self).__init__(*args, **kwargs)
+
+        if self.instance.pk:
+            initial_header_font = self.instance.admin_header_font
+            initial_body_font = self.instance.admin_body_font
         else:
-            field_label = ""
-        for error in errors:
-            messages.error(request, "%s %s" % (field_label, error))
-            n_messages += 1
-    return n_messages
+            initial_header_font = kwargs.get("initial", {}).get("admin_header_font")
+            initial_body_font = kwargs.get("initial", {}).get("admin_body_font")
 
-
-def flatatt_filter(attrs):
-    attrs = dict((key, value) for (key, value) in six.iteritems(attrs) if key and value)
-    return flatatt(attrs)
-
-
-def get_possible_name_fields_for_model(model):
-    """
-    Get possible name fields for given model.
-
-    This function yields strings of field names that
-    could possible be identified as name fields for model.
-
-    For example
-    get_possible_name_fields_for_model(Coupon) yields string "code"
-
-    :param model Class object of the model:
-    :type model object:
-    :return: Yield strings of possible name fields.
-    :rtype: str
-    """
-
-    if hasattr(model, "name_field"):
-        yield model.name_field
-
-    for field in model._meta.local_fields:
-        if field.name in ["name", "title", "username"]:
-            yield field.name
-    if hasattr(model, "_parler_meta"):
-        for field in model._parler_meta.root_model._meta.get_fields():
-            if field.name not in ("master", "id", "language_code", "description"):
-                yield field.name
+        self.fields["admin_header_font"] = ObjectSelect2ModelField(
+            label=_("Admin Header Font"),
+            initial=initial_header_font,
+            model=Font,
+            required=False,
+            widget=QuickAddFontSelect(editable_model=Font, initial=initial_header_font),
+        )
+        self.fields["admin_body_font"] = ObjectSelect2ModelField(
+            label=_("Admin Body Font"),
+            initial=initial_body_font,
+            model=Font,
+            required=False,
+            widget=QuickAddFontSelect(editable_model=Font, initial=initial_body_font),
+        )
