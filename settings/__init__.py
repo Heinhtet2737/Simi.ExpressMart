@@ -5,29 +5,40 @@
 #
 # This source code is licensed under the OSL-3.0 license found in the
 # LICENSE file in the root directory of this source tree.
-from __future__ import unicode_literals
+import os
+from django.core.exceptions import ImproperlyConfigured
 
-from django.utils.translation import ugettext_lazy as _
+from shuup.utils.setup import Setup
 
-from shuup.admin.base import AdminModule, MenuEntry
-from shuup.admin.menu import SETTINGS_MENU_CATEGORY
-from shuup.admin.utils.urls import admin_url
+from . import base_settings
 
 
-class SettingsModule(AdminModule):
-    name = _("System Settings")
-    breadcrumbs_menu_entry = MenuEntry(name, url="shuup_admin:settings.list")
+def configure(setup):
+    base_settings.configure(setup)
 
-    def get_urls(self):
-        return [admin_url("^settings/$", "shuup.admin.modules.settings.views.SystemSettingsView", name="settings.list")]
+    local_settings_file = os.getenv("LOCAL_SETTINGS_FILE")
 
-    def get_menu_entries(self, request):
-        return [
-            MenuEntry(
-                text=self.name,
-                icon="fa fa-home",
-                url="shuup_admin:settings.list",
-                category=SETTINGS_MENU_CATEGORY,
-                ordering=4,
-            )
-        ]
+    # Backward compatibility: Find from current directory, if
+    # LOCAL_SETTINGS_FILE environment variables is unset
+    if local_settings_file is None:
+        cand = os.path.join(os.path.dirname(__file__), "local_settings.py")
+        if os.path.exists(cand):
+            local_settings_file = cand
+
+    # Load local settings from file
+    if local_settings_file:
+        local_settings_ns = {
+            "__file__": local_settings_file,
+        }
+        with open(local_settings_file, "rb") as fp:
+            compiled = compile(fp.read(), local_settings_file, "exec")
+            exec(compiled, local_settings_ns)
+        if "configure" not in local_settings_ns:
+            raise ImproperlyConfigured("Error! No configure in local_settings.")
+        local_configure = local_settings_ns["configure"]
+        local_configure(setup)
+
+    return setup
+
+
+globals().update(Setup.configure(configure))
